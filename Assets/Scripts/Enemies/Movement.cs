@@ -1,9 +1,10 @@
+using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Scripts.Enemies
 {
-    public class Movement: MonoBehaviour
+    public class Movement: MonoBehaviour, IPooledObject
     {
         //TODO: ADD NAVMESH
         //TODO: Add Move to closest Treasure
@@ -19,12 +20,19 @@ namespace Scripts.Enemies
         private NavMeshAgent _agent;
         private bool _carryingTreasure;
 
-        private void Start()
+        public void OnObjectSpawn()
         {
+            SetDestinations();
             _agent = GetComponent<NavMeshAgent>();
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _currentTarget = treasureTarget;
+        }
+
+        private void SetDestinations()
+        {
+            treasureTarget = GameObject.FindGameObjectWithTag("Treasure").transform;
+            doorTarget = GameObject.FindGameObjectWithTag("Door").transform;
         }
 
         private void Update()
@@ -41,7 +49,7 @@ namespace Scripts.Enemies
             }
             else if (other.gameObject.CompareTag($"Door") && _carryingTreasure)
             {
-                Destroy(gameObject);
+                EnemySpawnSystem.DisableEnemies(other.gameObject);
             }
         }
     }

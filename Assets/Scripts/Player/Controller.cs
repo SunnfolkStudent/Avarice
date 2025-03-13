@@ -1,3 +1,4 @@
+using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -33,7 +34,7 @@ namespace Scripts.Player
         {
             if (other.CompareTag($"Enemy"))
             {
-               Destroy(other.gameObject);
+               EnemySpawnSystem.DisableEnemies(other.gameObject);
             }
         }
     }
