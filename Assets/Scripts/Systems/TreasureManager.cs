@@ -1,9 +1,12 @@
+using Scripts.Enemies;
 using UnityEngine;
+
+[RequireComponent(typeof(Animator))]
 public class TreasureManager : MonoBehaviour
 {
-   [SerializeField] private int treasureValue;
-
+   [SerializeField] public int treasureValue;
    [SerializeField] private TreasureState state;
+   private Animator _animator;
 
    private enum TreasureState
    {
@@ -16,5 +19,19 @@ public class TreasureManager : MonoBehaviour
    private void Awake()
    {
       state = TreasureState.Full;
+      treasureValue = (int)TreasureState.Full;
+   }
+
+   private void Start()
+   {
+      _animator = GetComponent<Animator>();
+   }
+
+   private void OnCollisionEnter2D(Collision2D other)
+   {
+      if (other.gameObject.CompareTag("Enemy"))
+      {
+         other.transform.GetComponent<CollectTreasure>().PickupTreasure(ref treasureValue, this);
+      }
    }
 }

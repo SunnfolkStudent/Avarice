@@ -1,3 +1,4 @@
+using Scripts.Enemies;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
@@ -34,7 +35,18 @@ namespace Scripts.Player
         {
             if (other.CompareTag($"Enemy"))
             {
-               EnemySpawnSystem.DisableEnemies(other.gameObject);
+                if (other.GetComponent<Enemies.Movement>().carryingTreasure)
+                {
+                    other.GetComponent<CollectTreasure>().DropTreasure();
+                }
+                other.gameObject.SetActive(false); 
+            }
+
+            if (other.CompareTag("DroppedTreasure"))
+            {
+                var tm = other.GetComponent<DroppedTreasure>();
+                tm._parentTreasure.treasureValue += tm.treasureValue;
+                Destroy(other.gameObject);
             }
         }
     }

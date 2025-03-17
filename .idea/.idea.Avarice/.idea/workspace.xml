@@ -11,8 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/DroppedTreasure.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Animation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/ObjectPooler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/TreasureManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -81,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741774037897</updated>
       <workItem from="1741774040478" duration="8440000" />
-      <workItem from="1741861507083" duration="4362000" />
+      <workItem from="1741861507083" duration="13693000" />
     </task>
     <servers />
   </component>
@@ -100,13 +103,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/Movement.cs</url>
-          <line>45</line>
+          <line>48</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Movement.cs" containingFunctionPresentation="Method 'OnCollisionEnter2D'">
             <startOffsets>
-              <option value="1399" />
+              <option value="1476" />
             </startOffsets>
             <endOffsets>
-              <option value="1400" />
+              <option value="1477" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

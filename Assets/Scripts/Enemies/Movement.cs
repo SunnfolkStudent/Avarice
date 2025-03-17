@@ -1,6 +1,7 @@
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace Scripts.Enemies
 {
@@ -8,7 +9,7 @@ namespace Scripts.Enemies
     {
         //TODO: ADD NAVMESH
         //TODO: Add Move to closest Treasure
-        //TODO: Add Statemachine (enums)
+        //TODO: Add State machine (enums)
         //TODO: Add Animation
         //TODO: Add Move to Closest Door if Have Treasure
         
@@ -18,7 +19,9 @@ namespace Scripts.Enemies
         [SerializeField] Transform doorTarget;
         private Transform _currentTarget;
         private NavMeshAgent _agent;
-        private bool _carryingTreasure;
+        public bool carryingTreasure;
+
+        private float _holdingSpeed = 2.5f;
 
         public void OnObjectSpawn()
         {
@@ -45,11 +48,12 @@ namespace Scripts.Enemies
             if (other.gameObject.CompareTag($"Treasure"))
             {
                 _currentTarget = doorTarget;
-                _carryingTreasure = true;
+                carryingTreasure = true;
+                _agent.speed = _holdingSpeed;
             }
-            else if (other.gameObject.CompareTag($"Door") && _carryingTreasure)
+            else if (other.gameObject.CompareTag($"Door") && carryingTreasure)
             {
-                EnemySpawnSystem.DisableEnemies(other.gameObject);
+                EnemySpawnSystem.DisableEnemies(gameObject);
             }
         }
     }

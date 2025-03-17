@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - ExitDoor
   - EntryDoor
+  - DroppedTreasure
+  - Hoard
   layers:
   - Default
   - TransparentFX
