@@ -1,3 +1,4 @@
+using System;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
@@ -15,8 +16,8 @@ namespace Scripts.Enemies
         
         //TODO: Check if Player can obstruct NavMesh dynamically?
         
-        [SerializeField] Transform treasureTarget;
-        [SerializeField] Transform doorTarget;
+        [FormerlySerializedAs("treasureTarget")] [SerializeField] Transform hoardTarget;
+        [FormerlySerializedAs("doorTarget")] [HideInInspector] public Transform stairsTarget;
         private Transform _currentTarget;
         private NavMeshAgent _agent;
         public bool carryingTreasure;
@@ -29,13 +30,13 @@ namespace Scripts.Enemies
             _agent = GetComponent<NavMeshAgent>();
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
-            _currentTarget = treasureTarget;
+            _currentTarget = hoardTarget;
         }
 
         private void SetDestinations()
         {
-            treasureTarget = GameObject.FindGameObjectWithTag("Treasure").transform;
-            doorTarget = GameObject.FindGameObjectWithTag("Door").transform;
+            hoardTarget = GameObject.FindGameObjectWithTag($"Hoard").transform;
+            stairsTarget = GameObject.FindGameObjectWithTag($"Stairs").transform;
         }
 
         private void Update()
@@ -45,13 +46,17 @@ namespace Scripts.Enemies
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag($"Treasure"))
+            if (other.gameObject.CompareTag($"Hoard"))
             {
-                _currentTarget = doorTarget;
+                _currentTarget = stairsTarget;
                 carryingTreasure = true;
                 _agent.speed = _holdingSpeed;
             }
-            else if (other.gameObject.CompareTag($"Door") && carryingTreasure)
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        { 
+            if (other.CompareTag($"Stairs") && carryingTreasure)
             {
                 EnemySpawnSystem.DisableEnemies(gameObject);
             }

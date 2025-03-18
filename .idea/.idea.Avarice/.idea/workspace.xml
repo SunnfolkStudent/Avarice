@@ -85,6 +85,8 @@
       <updated>1741774037897</updated>
       <workItem from="1741774040478" duration="8440000" />
       <workItem from="1741861507083" duration="13693000" />
+      <workItem from="1742282986012" duration="86000" />
+      <workItem from="1742283231458" duration="310000" />
     </task>
     <servers />
   </component>
@@ -106,10 +108,10 @@
           <line>48</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Movement.cs" containingFunctionPresentation="Method 'OnCollisionEnter2D'">
             <startOffsets>
-              <option value="1476" />
+              <option value="1551" />
             </startOffsets>
             <endOffsets>
-              <option value="1477" />
+              <option value="1552" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

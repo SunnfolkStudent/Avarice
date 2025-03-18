@@ -55,6 +55,7 @@ namespace Scripts.Systems
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = spawnPoint.position;
             objectToSpawn.transform.rotation = spawnRotation;
+            objectToSpawn.GetComponent<Movement>().stairsTarget = spawnPoint;
 
             IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
 

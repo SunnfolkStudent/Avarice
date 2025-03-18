@@ -5,12 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Treasure
-  - Door
   - Enemy
-  - ExitDoor
-  - EntryDoor
   - DroppedTreasure
   - Hoard
+  - Stairs
   layers:
   - Default
   - TransparentFX
