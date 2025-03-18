@@ -36,7 +36,6 @@ namespace Scripts.Enemies
         private void SetDestinations()
         {
             hoardTarget = GameObject.FindGameObjectWithTag($"Hoard").transform;
-            stairsTarget = GameObject.FindGameObjectWithTag($"Stairs").transform;
         }
 
         private void Update()
