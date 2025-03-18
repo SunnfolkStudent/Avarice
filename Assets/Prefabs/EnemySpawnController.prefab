@@ -46,4 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints:
   - {fileID: 0}
+  - {fileID: 0}
+  hoardPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   spawnInterval: 1.5
+  spawnCount: 3

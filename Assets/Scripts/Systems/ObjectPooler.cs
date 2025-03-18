@@ -6,6 +6,7 @@ namespace Scripts.Systems
 {
     public class ObjectPooler : MonoBehaviour
     {
+        //TODO: Make enemies keep spawning
         [System.Serializable]
         public class Pool
         {
@@ -43,7 +44,7 @@ namespace Scripts.Systems
             }
         }
 
-        public GameObject SpawnFromPool(string key, Transform spawnPoint, Quaternion spawnRotation)
+        public GameObject SpawnFromPool(string key, Transform spawnPoint, Quaternion spawnRotation, Transform Hoard)
         {
             if (!poolDictionary.ContainsKey(key))
             {
@@ -55,7 +56,11 @@ namespace Scripts.Systems
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = spawnPoint.position;
             objectToSpawn.transform.rotation = spawnRotation;
-            objectToSpawn.GetComponent<Movement>().stairsTarget = spawnPoint;
+            var move = objectToSpawn.GetComponent<Movement>();
+            move.stairsTarget = spawnPoint;
+            move.hoardTarget = Hoard;
+            
+            
 
             IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
 

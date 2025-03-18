@@ -86,7 +86,7 @@
       <workItem from="1741774040478" duration="8440000" />
       <workItem from="1741861507083" duration="13693000" />
       <workItem from="1742282986012" duration="86000" />
-      <workItem from="1742283231458" duration="1592000" />
+      <workItem from="1742283231458" duration="3425000" />
     </task>
     <servers />
   </component>
@@ -105,13 +105,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/Movement.cs</url>
-          <line>48</line>
+          <line>38</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Movement.cs" containingFunctionPresentation="Method 'OnCollisionEnter2D'">
             <startOffsets>
-              <option value="1487" />
+              <option value="1114" />
             </startOffsets>
             <endOffsets>
-              <option value="1488" />
+              <option value="1115" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

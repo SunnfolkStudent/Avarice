@@ -8,16 +8,12 @@ namespace Scripts.Enemies
 {
     public class Movement: MonoBehaviour, IPooledObject
     {
-        //TODO: ADD NAVMESH
-        //TODO: Add Move to closest Treasure
         //TODO: Add State machine (enums)
         //TODO: Add Animation
-        //TODO: Add Move to Closest Door if Have Treasure
-        
         //TODO: Check if Player can obstruct NavMesh dynamically?
         
-        [FormerlySerializedAs("treasureTarget")] [SerializeField] Transform hoardTarget;
-        [FormerlySerializedAs("doorTarget")] [HideInInspector] public Transform stairsTarget;
+        [HideInInspector] public Transform hoardTarget;
+        [HideInInspector] public Transform stairsTarget;
         private Transform _currentTarget;
         private NavMeshAgent _agent;
         public bool carryingTreasure;
@@ -26,18 +22,12 @@ namespace Scripts.Enemies
 
         public void OnObjectSpawn()
         {
-            SetDestinations();
             _agent = GetComponent<NavMeshAgent>();
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _currentTarget = hoardTarget;
         }
-
-        private void SetDestinations()
-        {
-            hoardTarget = GameObject.FindGameObjectWithTag($"Hoard").transform;
-        }
-
+        
         private void Update()
         {
             _agent.SetDestination(_currentTarget.position);
