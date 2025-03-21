@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8789598574863739794, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
       propertyPath: m_Name
-      value: EntryDoor
+      value: Stairs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7595,7 +7595,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4c65f87e236ca5b44927cfd5a327c7a4, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f2ecf571856204dc589027f18db098ed, type: 2}
 --- !u!4 &1150170557
 Transform:
   m_ObjectHideFlags: 0

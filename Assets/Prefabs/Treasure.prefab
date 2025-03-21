@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1309945748422993205}
   - component: {fileID: -6193624739520241151}
   m_Layer: 0
-  m_Name: DroppedTreasure
-  m_TagString: DroppedTreasure
+  m_Name: Treasure
+  m_TagString: Treasure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

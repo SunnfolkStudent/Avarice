@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Treasure
   - Enemy
-  - DroppedTreasure
   - Hoard
   - Stairs
   layers:

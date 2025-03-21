@@ -28,7 +28,9 @@ namespace Scripts.Systems
         public Dictionary<string, Queue<GameObject>> poolDictionary;
        
         
-        private void Start()
+        private void Start() =>  InitialisePool(); 
+
+        private void InitialisePool()
         {
             poolDictionary = new Dictionary<string, Queue<GameObject>>();
             foreach (Pool pool in pools)
@@ -44,7 +46,7 @@ namespace Scripts.Systems
             }
         }
 
-        public GameObject SpawnFromPool(string key, Transform spawnPoint, Quaternion spawnRotation, Transform Hoard)
+        public GameObject SpawnFromPool(string key, Transform spawnPoint, Quaternion spawnRotation)
         {
             if (!poolDictionary.ContainsKey(key))
             {
@@ -56,27 +58,17 @@ namespace Scripts.Systems
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = spawnPoint.position;
             objectToSpawn.transform.rotation = spawnRotation;
-            var move = objectToSpawn.GetComponent<Movement>();
-            move.stairsTarget = spawnPoint;
-            move.hoardTarget = Hoard;
             
-            
-
-            IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
+            /*IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
 
             if (pooledObject != null)
             {
                 pooledObject.OnObjectSpawn();
-            }
+            }*/
 
             poolDictionary[key].Enqueue(objectToSpawn);
             
             return objectToSpawn;
-        }
-
-        public static void DisableEnemies(GameObject enemy)
-        {
-            enemy.SetActive(false);
         }
     }
 }
