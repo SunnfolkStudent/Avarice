@@ -1,8 +1,6 @@
-using System;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 namespace Scripts.Enemies
 {
@@ -12,42 +10,59 @@ namespace Scripts.Enemies
         //TODO: Add Animation
         //TODO: Check if Player can obstruct NavMesh dynamically?
         
-        [HideInInspector] public Transform hoardTarget;
-        [HideInInspector] public Transform stairsTarget;
+        public Transform stairsTarget;
         private Transform _currentTarget;
         private NavMeshAgent _agent;
         public bool carryingTreasure;
+        ObjectPool _objectPool;
+        private float _speed = 2f;
 
-        private float _holdingSpeed = 2.5f;
+        private void Start()
+        {
+            _objectPool = ObjectPool.Instance;
+            _speed = _agent.speed;
+            _agent.updateRotation = false;
+            _agent.updateUpAxis = false;
+        }
+
+        private void OnEnable()
+        {
+            OnObjectSpawn();
+        }
+
+        public void SetTarget(Transform target, Transform spawn)
+        {
+            _currentTarget = target;
+            stairsTarget = spawn;
+        }
 
         public void OnObjectSpawn()
         {
             _agent = GetComponent<NavMeshAgent>();
-            _agent.updateRotation = false;
-            _agent.updateUpAxis = false;
-            _currentTarget = hoardTarget;
+            _agent.speed = _speed;
+            carryingTreasure = false;
         }
         
         private void Update()
         {
             _agent.SetDestination(_currentTarget.position);
+            _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag($"Hoard"))
-            {
-                _currentTarget = stairsTarget;
-                carryingTreasure = true;
-                _agent.speed = _holdingSpeed;
-            }
+            if (!other.gameObject.CompareTag($"Hoard")) return;
+            
+            _currentTarget = stairsTarget;
+            carryingTreasure = true;
+            _agent.speed = _agent.speed/2;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
             if (other.CompareTag($"Stairs") && carryingTreasure)
             {
-                EnemySpawnSystem.DisableEnemies(gameObject);
+                _objectPool.ReturnPooledObject(gameObject);
             }
         }
     }

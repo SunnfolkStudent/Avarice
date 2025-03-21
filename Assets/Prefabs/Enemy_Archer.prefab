@@ -77,14 +77,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2171302070262883060}
+  - component: {fileID: 3156193921478634571}
   - component: {fileID: 5977400645948107322}
-  - component: {fileID: 4686654135305180926}
   - component: {fileID: 3315833764078623759}
   - component: {fileID: 330699159436173830}
   - component: {fileID: 3068312885649301609}
   - component: {fileID: 4022096213131171721}
   m_Layer: 0
-  m_Name: Enemy_Collector
+  m_Name: Enemy_Archer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,13 +99,27 @@ Transform:
   m_GameObject: {fileID: 1609421024034124745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.17, y: 4.19, z: 0}
+  m_LocalPosition: {x: 7.41, y: -2.23, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1779327507448239742}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3156193921478634571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609421024034124745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676c2a398a95f48dd8d2729982ede102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairsTarget: {fileID: 0}
+  carryingTreasure: 0
 --- !u!114 &5977400645948107322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,21 +135,6 @@ MonoBehaviour:
   purse: 10
   bagSpace: 30
   treasureToDrop: {fileID: 4074979344235194456, guid: fc31955ae1a864c3fb0eb81379f8a552, type: 3}
---- !u!114 &4686654135305180926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609421024034124745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676c2a398a95f48dd8d2729982ede102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveToTarget: {fileID: 0}
-  stairsTarget: {fileID: 0}
-  carryingTreasure: 0
 --- !u!212 &3315833764078623759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -181,7 +180,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.40600348, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
