@@ -1,14 +1,13 @@
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 namespace Scripts.Enemies
 {
     public class Movement: MonoBehaviour, IPooledObject
     {
         public Transform stairsTarget;
-        [FormerlySerializedAs("_currentTarget")] public Transform currentTarget;
+        public Transform currentTarget;
         private NavMeshAgent _agent;
         public bool carryingTreasure;
         private ObjectPool _objectPool;
@@ -32,7 +31,6 @@ namespace Scripts.Enemies
         private void OnEnable()
         {
             OnObjectSpawn();
-            
         }
 
         public void SetTarget(Transform target, Transform spawn)
@@ -45,8 +43,13 @@ namespace Scripts.Enemies
         public void OnObjectSpawn()
         {
             _agent = GetComponent<NavMeshAgent>();
+            _agent.ResetPath();
+            _agent.SetDestination(Vector2.zero);
             _agent.speed = _speed;
             carryingTreasure = false;
+            _agent.updateRotation = false;
+            _agent.updateUpAxis = false;
+            _agent.updatePosition = false;
         }
         
         private void Update()
@@ -70,6 +73,11 @@ namespace Scripts.Enemies
         private void OnTriggerEnter2D(Collider2D other)
         { 
             if (other.CompareTag($"Stairs") && carryingTreasure)
+            {
+                _objectPool.ReturnPooledObject(gameObject);
+            }
+
+            if (other.CompareTag("Player"))
             {
                 _objectPool.ReturnPooledObject(gameObject);
             }
