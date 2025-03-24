@@ -56,7 +56,7 @@ namespace Scripts.Systems
 
         private GameObject GetInactiveObjectInPool(Pool pool)
         {
-            return pool.objectPool.Find(item => !item.activeInHierarchy);// ?? pool.objectPool.First() ?? pool.objectPool.Last();
+            return pool.objectPool.Find(item => !item.activeInHierarchy) ?? pool.objectPool.First() ?? pool.objectPool.Last();
         }
         
         public GameObject SpawnFromPools(string key, Transform spawnPoint, Quaternion spawnRotation)

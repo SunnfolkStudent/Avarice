@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Scripts.Systems;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -50,7 +51,9 @@ public class WaveManager : MonoBehaviour
             }
             else
             {
-                currentWave = 0;
+                //currentWave = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                //TODO: ADD Code to Change the level
             }
             
             waves[currentWave].spawnCounter = waves[currentWave].spawnCount;

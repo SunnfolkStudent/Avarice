@@ -66,7 +66,7 @@ namespace Scripts.Enemies
            
             currentTarget = stairsTarget;
             carryingTreasure = true;
-            _agent.speed = _agent.speed/2;
+            _agent.speed /= 2;
             _animator.Play($"Loot");
         }
 
