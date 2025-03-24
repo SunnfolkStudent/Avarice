@@ -1,3 +1,4 @@
+using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -26,7 +27,7 @@ namespace Scripts.Enemies
         public void DropTreasure()
         {
             var clone = Instantiate(treasureToDrop, transform.position, Quaternion.identity);
-            clone.GetComponent<DroppedTreasure>()._parentTreasure = _treasurePicked;
+            clone.GetComponent<Treasure>().parentTreasure = _treasurePicked;
         }
     }
 }

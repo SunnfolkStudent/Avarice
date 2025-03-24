@@ -15,6 +15,11 @@ namespace Scripts.Player
         {
             _objectPool = ObjectPool.Instance;
         }
+
+        public void SpawnFireBall()
+        {
+            
+        }
         
         public void UpdateFireball(bool shoot, Vector2 moveDirection)
         {

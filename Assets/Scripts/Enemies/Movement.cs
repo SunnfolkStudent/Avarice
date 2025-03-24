@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
