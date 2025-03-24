@@ -19,6 +19,8 @@ namespace Scripts.Enemies
         
         private void Start()
         {
+            stairsTarget = null;
+            currentTarget = null;
             _animator = GetComponent<Animator>();
             _objectPool = ObjectPool.Instance;
             _speed = _agent.speed;
@@ -61,7 +63,7 @@ namespace Scripts.Enemies
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag($"Hoard")) return;
-            
+            if (transform.tag == "Archer") return;
             _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
            
             currentTarget = stairsTarget;
@@ -74,11 +76,15 @@ namespace Scripts.Enemies
         { 
             if (other.CompareTag($"Stairs") && carryingTreasure)
             {
+                stairsTarget = null;
+                currentTarget = null;
                 _objectPool.ReturnPooledObject(gameObject);
             }
 
             if (other.CompareTag("Player"))
             {
+                stairsTarget = null;
+                currentTarget = null;
                 _objectPool.ReturnPooledObject(gameObject);
             }
         }
