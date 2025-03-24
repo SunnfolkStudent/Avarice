@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7049501072068900969}
   - component: {fileID: 4138259957554599610}
   - component: {fileID: 4724019038971300769}
+  - component: {fileID: 7793993023268530216}
   m_Layer: 0
   m_Name: Hoard
   m_TagString: Hoard
@@ -162,3 +163,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7793993023268530216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859000389338523715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19338d29c06444d8c989521ad1ca78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHoardValue: 0

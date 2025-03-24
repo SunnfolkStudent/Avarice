@@ -1,39 +1,45 @@
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace Scripts.Enemies
 {
     public class Movement: MonoBehaviour, IPooledObject
     {
-        //TODO: Add State machine (enums)
-        //TODO: Add Animation
-        //TODO: Check if Player can obstruct NavMesh dynamically?
-        
         public Transform stairsTarget;
-        private Transform _currentTarget;
+        [FormerlySerializedAs("_currentTarget")] public Transform currentTarget;
         private NavMeshAgent _agent;
         public bool carryingTreasure;
-        ObjectPool _objectPool;
+        private ObjectPool _objectPool;
         private float _speed = 2f;
 
+        private Vector2 _velocity = Vector2.zero;
+        
+        private Animator _animator;
+        
         private void Start()
         {
+            _animator = GetComponent<Animator>();
             _objectPool = ObjectPool.Instance;
             _speed = _agent.speed;
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
+            _agent.updatePosition = false;
+            _animator.Play($"Walk");
         }
 
         private void OnEnable()
         {
             OnObjectSpawn();
+            
         }
 
         public void SetTarget(Transform target, Transform spawn)
         {
-            _currentTarget = target;
+            currentTarget = target;
             stairsTarget = spawn;
+            
         }
 
         public void OnObjectSpawn()
@@ -45,17 +51,20 @@ namespace Scripts.Enemies
         
         private void Update()
         {
-            _agent.SetDestination(_currentTarget.position);
-            _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+            _agent.SetDestination(currentTarget.position);
+            transform.position = Vector2.SmoothDamp(transform.position, _agent.nextPosition, ref _velocity, 0.1f);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag($"Hoard")) return;
             
-            _currentTarget = stairsTarget;
+            _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+           
+            currentTarget = stairsTarget;
             carryingTreasure = true;
             _agent.speed = _agent.speed/2;
+            _animator.Play($"Loot");
         }
 
         private void OnTriggerEnter2D(Collider2D other)

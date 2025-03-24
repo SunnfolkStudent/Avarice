@@ -97,7 +97,7 @@ MonoBehaviour:
     spawnCount: 60
   - key: BloodParticles
     objectPool: []
-    objectToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 2008504836474353095, guid: fd399ca4b182241dfbc399a15b9486bd, type: 3}
     objectParent: {fileID: 3977050718851265560}
     spawnCount: 60
 --- !u!1 &2273016204387377599

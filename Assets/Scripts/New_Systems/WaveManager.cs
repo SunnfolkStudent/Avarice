@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    public int currentWave;
     [System.Serializable]
     public class Wave
     {
@@ -11,16 +12,14 @@ public class WaveManager : MonoBehaviour
         public Transform[] spawnPoint;
         public Transform[] targets;
         public int spawnCount;
-        public int spawnCounter;
+        [HideInInspector]public int spawnCounter;
         public float spawnInterval;
-        public float spawnIntervalTimer;
+        [HideInInspector]public float spawnIntervalTimer;
         public float timeToNextWave;
     }
     
     public List<Wave> waves;
     private ObjectPool _objectPool;
-    public int currentWave;
-    public int loopWave;
 
     private void Start()
     {
@@ -48,10 +47,6 @@ public class WaveManager : MonoBehaviour
             if (currentWave < waves.Count-1)
             {
                 currentWave += 1;
-            }
-            else if (currentWave == loopWave)
-            {
-                currentWave = loopWave;
             }
             else
             {

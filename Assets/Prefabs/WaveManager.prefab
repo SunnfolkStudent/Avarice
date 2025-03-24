@@ -44,11 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a85c738120c48bbadb34974d6c5bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWave: 0
   waves:
   - key: Collector
     spawnPoint:
     - {fileID: 0}
-    spawnCount: 3
+    targets:
+    - {fileID: 0}
+    - {fileID: 0}
+    spawnCount: 10
     spawnCounter: 0
     spawnInterval: 0.1
     spawnIntervalTimer: 0
@@ -56,10 +60,56 @@ MonoBehaviour:
   - key: Archer
     spawnPoint:
     - {fileID: 0}
+    targets:
+    - {fileID: 0}
     spawnCount: 5
     spawnCounter: 0
-    spawnInterval: 0
+    spawnInterval: 0.5
     spawnIntervalTimer: 0
-    timeToNextWave: 0
-  hoardPoint: {fileID: 0}
-  player: {fileID: 0}
+    timeToNextWave: 10
+  - key: Collector
+    spawnPoint:
+    - {fileID: 0}
+    targets:
+    - {fileID: 0}
+    - {fileID: 0}
+    spawnCount: 10
+    spawnCounter: 0
+    spawnInterval: 0.5
+    spawnIntervalTimer: 0
+    timeToNextWave: 4
+  - key: Archer
+    spawnPoint:
+    - {fileID: 0}
+    - {fileID: 0}
+    targets:
+    - {fileID: 0}
+    spawnCount: 5
+    spawnCounter: 0
+    spawnInterval: 0.5
+    spawnIntervalTimer: 0
+    timeToNextWave: 10
+  - key: Collector
+    spawnPoint:
+    - {fileID: 0}
+    - {fileID: 0}
+    targets:
+    - {fileID: 0}
+    - {fileID: 0}
+    spawnCount: 10
+    spawnCounter: 0
+    spawnInterval: 0.5
+    spawnIntervalTimer: 0
+    timeToNextWave: 4
+  - key: Collector
+    spawnPoint:
+    - {fileID: 0}
+    - {fileID: 0}
+    targets:
+    - {fileID: 0}
+    - {fileID: 0}
+    spawnCount: 10
+    spawnCounter: 0
+    spawnInterval: 0.5
+    spawnIntervalTimer: 0
+    timeToNextWave: 4

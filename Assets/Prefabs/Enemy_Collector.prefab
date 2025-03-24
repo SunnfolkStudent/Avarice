@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 330699159436173830}
   - component: {fileID: 3068312885649301609}
   - component: {fileID: 4022096213131171721}
+  - component: {fileID: 1022142047311786225}
   m_Layer: 0
   m_Name: Enemy_Collector
   m_TagString: Enemy
@@ -133,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676c2a398a95f48dd8d2729982ede102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveToTarget: {fileID: 0}
   stairsTarget: {fileID: 0}
+  currentTarget: {fileID: 0}
   carryingTreasure: 0
 --- !u!212 &3315833764078623759
 SpriteRenderer:
@@ -250,7 +251,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -267,12 +268,34 @@ NavMeshAgent:
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 600
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!95 &1022142047311786225
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609421024034124745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 1059945688925373586, guid: 863c64b4a842f4426bda034db478932c, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
