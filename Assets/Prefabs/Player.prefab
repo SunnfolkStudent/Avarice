@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3924633644161360315}
   - component: {fileID: 371012200308402511}
   - component: {fileID: 4515535328430265953}
+  - component: {fileID: 4478966749215177474}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -183,9 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567311fa1842f4de68f3c484ba64ca0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  acceleration: 0
-  friction: 0
+  moveSpeed: 5
+  dashSpeed: 15
+  dashDuration: 0.5
+  dashCooldown: 5
+  stunDuration: 1.5
 --- !u!114 &2251410350618015566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e07982309074ebc82de914f014d0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballSpawnPoint: {fileID: 0}
+  fireballLifeTime: 0
+  fireballInterval: 0
 --- !u!114 &3924633644161360315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,3 +266,15 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &4478966749215177474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781467900313291149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccb1a24d897453ea5033e47b4aa2bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -86,6 +87,14 @@ namespace Scripts.Systems
         public void ReturnPooledObject(GameObject obj)
         {
             obj.SetActive(false);
+            obj.transform.position = Vector2.zero;
+        }
+
+        public IEnumerator ReturnPooledObject(GameObject obj, float time)
+        {
+            yield return new WaitForSeconds(time);
+            obj.SetActive(false);
+            obj.transform.position = Vector2.zero;
         }
     }
 }

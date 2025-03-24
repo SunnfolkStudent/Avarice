@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 834808747}
   m_Layer: 0
   m_Name: Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1474,6 +1474,14 @@ PrefabInstance:
     - target: {fileID: 5781467900313291149, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784952597588202416, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784952597588202416, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
+      propertyPath: dashCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7726823197950192746, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
       propertyPath: m_LocalPosition.x

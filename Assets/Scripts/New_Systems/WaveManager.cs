@@ -39,8 +39,8 @@ public class WaveManager : MonoBehaviour
         
         if (waves[currentWave].spawnCounter > 0)
         {
+            waves[currentWave].spawnIntervalTimer = Time.time + waves[currentWave].spawnInterval;
             waves[currentWave].spawnCounter--;
-            waves[currentWave].spawnIntervalTimer = Time.time + waves[0].spawnInterval;
         }
         else
         {
