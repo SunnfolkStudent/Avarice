@@ -188,6 +188,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
+--- !u!4 &202408676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278252513962512040, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
+  m_PrefabInstance: {fileID: 202408675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &264746535
 GameObject:
   m_ObjectHideFlags: 0
@@ -11733,7 +11738,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8a6b8774fadc5d94e90dc742f8c0a85f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4c8415251b9b6064b87be4dc64c567fd, type: 2}
 --- !u!4 &1150170557
 Transform:
   m_ObjectHideFlags: 0
@@ -15763,6 +15768,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+--- !u!4 &1346715054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3472453080256122456, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+  m_PrefabInstance: {fileID: 1346715053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1462586937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15775,6 +15785,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: waves.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: waves.Array.data[1].timeToNextWave
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: waves.Array.data[1].targets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: waves.Array.data[1].spawnPoint.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: 'waves.Array.data[1].targets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1992119333}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: 'waves.Array.data[1].targets.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1346715054}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: 'waves.Array.data[1].spawnPoint.Array.data[0]'
+      value: 
+      objectReference: {fileID: 202408676}
+    - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
+      propertyPath: 'waves.Array.data[1].spawnPoint.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2030923714}
     - target: {fileID: 6401607943060629082, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.0070505
@@ -16238,6 +16280,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+--- !u!4 &1992119333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3472453080256122456, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+  m_PrefabInstance: {fileID: 1992119332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030923713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16307,6 +16354,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
+--- !u!4 &2030923714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278252513962512040, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
+  m_PrefabInstance: {fileID: 2030923713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
