@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,22 +14,24 @@ namespace Scripts.Enemies
         private NavMeshAgent _agent;
         public bool carryingTreasure;
         private ObjectPool _objectPool;
-        private float _speed = 2f;
 
         private Vector2 _velocity = Vector2.zero;
         
         private Animator _animator;
-        
+        public bool archer;
+        private bool _go;
+        private SpriteRenderer _spriteRenderer;
+
+        private void Awake()
+        {
+            _agent = GetComponent<NavMeshAgent>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
         private void Start()
         {
-            stairsTarget = null;
-            currentTarget = null;
             _animator = GetComponent<Animator>();
             _objectPool = ObjectPool.Instance;
-            _speed = _agent.speed;
-            _agent.updateRotation = false;
-            _agent.updateUpAxis = false;
-            _agent.updatePosition = false;
             _animator.Play($"Walk");
         }
 
@@ -39,23 +44,20 @@ namespace Scripts.Enemies
         {
             currentTarget = target;
             stairsTarget = spawn;
-            
+            StartCoroutine(WaitForActivate());
         }
 
         public void OnObjectSpawn()
         {
-            _agent = GetComponent<NavMeshAgent>();
-            _agent.ResetPath();
-            _agent.SetDestination(Vector2.zero);
-            _agent.speed = _speed;
-            carryingTreasure = false;
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _agent.updatePosition = false;
+            carryingTreasure = false;
         }
         
         private void Update()
         {
+            if (!_go) return;
             _agent.SetDestination(currentTarget.position);
             transform.position = Vector2.SmoothDamp(transform.position, _agent.nextPosition, ref _velocity, 0.1f);
         }
@@ -63,7 +65,8 @@ namespace Scripts.Enemies
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag($"Hoard")) return;
-            if (transform.tag == "Archer") return;
+            if (archer) return;
+            
             _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
            
             currentTarget = stairsTarget;
@@ -74,19 +77,25 @@ namespace Scripts.Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if (other.CompareTag($"Stairs") && carryingTreasure)
+            if ((other.CompareTag($"Stairs") && carryingTreasure) || other.CompareTag("Player"))
             {
-                stairsTarget = null;
-                currentTarget = null;
+                ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
             }
+        }
 
-            if (other.CompareTag("Player"))
-            {
-                stairsTarget = null;
-                currentTarget = null;
-                _objectPool.ReturnPooledObject(gameObject);
-            }
+        private void ResetAgent(bool setValue)
+        {
+            _agent.enabled = setValue;
+            _go = setValue;
+            _spriteRenderer.enabled = setValue;
+        }
+
+        private IEnumerator WaitForActivate()
+        {
+            yield return new WaitForSeconds(.5f);
+            _animator.Play($"Walk");
+            ResetAgent(true);
         }
     }
 }
