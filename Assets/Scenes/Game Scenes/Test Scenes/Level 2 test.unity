@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 7404794358880243655, guid: cdf04456afea44d88bd4011c706566d2, type: 3}
       propertyPath: 'hoardPoints.Array.data[0]'
       value: 
-      objectReference: {fileID: 388513100}
+      objectReference: {fileID: 0}
     - target: {fileID: 7404794358880243655, guid: cdf04456afea44d88bd4011c706566d2, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
@@ -330,6 +330,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3472453080256122456, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472453080256122456, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138259957554599610, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138259957554599610, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4422760776024547455, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.29
@@ -393,6 +409,22 @@ PrefabInstance:
     - target: {fileID: 6275082396024136171, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -625483988, guid: dfc19a06f6bc7fd4ea96fd34e7dece9d, type: 3}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9143857099697126573, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_Sprite
@@ -2444,11 +2476,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!4 &388513100 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4422760776024547455, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
-  m_PrefabInstance: {fileID: 210445647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397795991
 GameObject:
   m_ObjectHideFlags: 0
