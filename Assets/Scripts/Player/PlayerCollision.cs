@@ -12,7 +12,7 @@ namespace Scripts.Player
                 {
                     other.GetComponent<CollectTreasure>().DropTreasure();
                 }*/
-                other.gameObject.SetActive(false); 
+                //other.gameObject.SetActive(false); 
             }
 
             /*if (other.CompareTag("Treasure"))
