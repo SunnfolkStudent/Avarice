@@ -51,8 +51,8 @@ public class WaveManager : MonoBehaviour
             }
             else
             {
-                currentWave = 0;
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                //currentWave = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
             
             waves[currentWave].spawnCounter = waves[currentWave].spawnCount;

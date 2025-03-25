@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8789598574863739794, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
       propertyPath: m_Name
-      value: EntryDoor_1
+      value: EntryDoorLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -611,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 3472453080256122456, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859000389338523715, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Name
+      value: HoardRight
       objectReference: {fileID: 0}
     - target: {fileID: 4422760776024547455, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10278,6 +10282,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.12
       objectReference: {fileID: 0}
+    - target: {fileID: 3859000389338523715, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_Name
+      value: HoardLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 4422760776024547455, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.72
@@ -10648,7 +10656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8789598574863739794, guid: d0481261f6ae64f68bbf4b4390b1337a, type: 3}
       propertyPath: m_Name
-      value: EntryDoor
+      value: EntryDoorTop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15822,15 +15830,15 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 22194369}
+  - {fileID: 1896301250}
+  - {fileID: 1315935660}
+  - {fileID: 1411796567}
   - {fileID: 1072433595}
   - {fileID: 210445647}
   - {fileID: 1392621946}
-  - {fileID: 1411796567}
-  - {fileID: 1617932330}
   - {fileID: 102310304}
-  - {fileID: 1896301250}
+  - {fileID: 1617932330}
   - {fileID: 1951274331}
-  - {fileID: 1315935660}
   - {fileID: 320989989}
   - {fileID: 847901760}
   - {fileID: 200321156}
