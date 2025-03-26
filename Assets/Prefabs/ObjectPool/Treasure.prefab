@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7492286046512204607}
   - component: {fileID: 8378232816737297187}
-  - component: {fileID: 1309945748422993205}
   - component: {fileID: -6193624739520241151}
+  - component: {fileID: 7279090802159764460}
   m_Layer: 0
   m_Name: Treasure
   m_TagString: Treasure
@@ -89,20 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1309945748422993205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074979344235194456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f3c5125e57c4244803fdb5bad3b88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  treasureValue: 30
-  _parentTreasure: {fileID: 0}
 --- !u!61 &-6193624739520241151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +135,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7279090802159764460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074979344235194456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abf73aeb38e4f4cb957a027f84fc1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureValue: 0
+  parentTreasure: {fileID: 0}

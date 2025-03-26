@@ -9,6 +9,7 @@ TagManager:
   - Hoard
   - Stairs
   - Wall
+  - Arrow
   layers:
   - Default
   - TransparentFX

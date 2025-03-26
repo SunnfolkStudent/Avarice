@@ -36,7 +36,17 @@ public class WaveManager : MonoBehaviour
         var spawn = waves[currentWave].spawnPoint[Random.Range(0, waves[currentWave].spawnPoint.Length)];
         
         var clone = _objectPool.SpawnFromPools(waves[currentWave].key, spawn, Quaternion.identity);
-        clone.GetComponent<Scripts.Enemies.Movement>().SetTarget(target, spawn);
+        if (waves[currentWave].key == "Collector")
+        {
+            print("Collector");
+            clone.GetComponent<Scripts.Enemies.Movement>().SetTarget(target, spawn);
+        }
+        else if (waves[currentWave].key == "Archer")
+        {
+            print("Archer");
+            clone.GetComponent<Scripts.Enemies.ArcherController>().SetTarget(target);
+        }
+        
         
         if (waves[currentWave].spawnCounter > 0)
         {
@@ -53,6 +63,7 @@ public class WaveManager : MonoBehaviour
             {
                 //currentWave = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             
             waves[currentWave].spawnCounter = waves[currentWave].spawnCount;
