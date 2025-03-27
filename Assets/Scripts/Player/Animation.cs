@@ -11,6 +11,7 @@ namespace Scripts.Player
         private static readonly int Dash = Animator.StringToHash("Dash");
         private static readonly int Charge = Animator.StringToHash("Charge");
         private static readonly int Blast = Animator.StringToHash("Blast");
+        private static readonly int Stun = Animator.StringToHash("Stun");
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
 
@@ -26,7 +27,7 @@ namespace Scripts.Player
 
         private void Start() => _animator = GetComponent<Animator>();
 
-        public void UpdateAnimation(Vector2 moveDirection, bool dashing)
+        public void UpdateAnimation(Vector2 moveDirection, bool dashing, bool stunned)
         {
             if (moveDirection != Vector2.zero)
             {
@@ -34,10 +35,15 @@ namespace Scripts.Player
                 _animator.SetFloat(Vertical, moveDirection.y);
                 transform.localScale = new Vector3(Mathf.Sign(moveDirection.x), 1, 1);
             }
-
+            if (stunned)
+            {
+                _animator.Play(Stun);
+                return;
+            }
             if (dashing)
             {
                 _animator.Play(Dash);
+                return;
             }
 
             _animator.Play(moveDirection != Vector2.zero ? Walk : Idle);

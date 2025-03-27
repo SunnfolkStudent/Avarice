@@ -1,3 +1,5 @@
+
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +23,15 @@ namespace Scripts.Player
         public bool IsDashing {get; private set;}
         public bool IsStunned { get; private set; }
         
+        [Header("Audio")]
+        private AudioSource _audioSource;
+        [SerializeField] private AudioClip dashClip;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
         private void Start() => _rigidbody2D = GetComponent<Rigidbody2D>();
         
 
@@ -30,6 +41,7 @@ namespace Scripts.Player
             _rigidbody2D.linearVelocity = _moveDirection * moveSpeed;
             if (dash && _canDash)
             {
+                _audioSource.PlayOneShot(dashClip);
                 StartCoroutine(Dash());
             }
         }
@@ -58,7 +70,7 @@ namespace Scripts.Player
         }
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag("Wall")) return;
+            if (!other.gameObject.CompareTag("Wall")) return;
             if (!IsDashing) return;
             StartCoroutine(Stun());
         }

@@ -29,13 +29,12 @@ namespace Scripts.Player
 
         private void Update()
         {
+            _animation.UpdateAnimation(_input.MoveDirection, _movement.IsDashing, _movement.IsStunned);
+            
             if (_movement.IsStunned) return;
             if (_movement.IsDashing) return;
-            
             _movement.UpdateMovement(_input.DashAttack,_input.MoveDirection);
-            _animation.UpdateAnimation(_input.MoveDirection, _movement.IsDashing);
             //_attacks.UpdateFireball(_input.FireBallAttack, _input.MoveDirection);
-            
             _navMeshObstacle.enabled = _input.MoveDirection == Vector2.zero;
         }
     }
