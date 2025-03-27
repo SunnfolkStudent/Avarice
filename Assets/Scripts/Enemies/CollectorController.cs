@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace Scripts.Enemies
 {
-    public class Movement: MonoBehaviour, IPooledObject
+    public class CollectorController: MonoBehaviour, IPooledObject
     {
         public Transform stairsTarget;
         public Transform currentTarget;
@@ -65,10 +65,10 @@ namespace Scripts.Enemies
             if (!other.gameObject.CompareTag($"Hoard")) return;
             if (archer) return;
             
-            _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
-           
-            currentTarget = stairsTarget;
             carryingTreasure = true;
+            
+            _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+            currentTarget = stairsTarget;
             _agent.speed /= 2;
             _animator.Play($"Loot");
         }
