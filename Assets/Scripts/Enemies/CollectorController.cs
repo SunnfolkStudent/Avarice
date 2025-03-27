@@ -82,12 +82,17 @@ namespace Scripts.Enemies
         { 
             if (other.CompareTag("Player") && !_isDead)
             {
-                var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
-                clone.GetComponent<TreasureDrop>().treasureValue = _collectTreasure.stolenTreasure;
+                if (carryingTreasure)
+                {
+                    var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
+                    clone.GetComponent<TreasureDrop>().treasureValue = _collectTreasure.stolenTreasure;
+                }
                 _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
                 _isDead = true;
+                ResetAgent(false);
+                _objectPool.ReturnPooledObject(gameObject);
             }
-            if ((other.CompareTag($"Stairs") && carryingTreasure) || other.CompareTag("Player"))
+            if ((other.CompareTag($"Stairs") && carryingTreasure))
             {
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
