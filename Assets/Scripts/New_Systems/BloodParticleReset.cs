@@ -1,6 +1,7 @@
+using Scripts.Systems;
 using UnityEngine;
 
-namespace Scripts.Systems
+namespace Scripts.New_Systems
 {
     public class BloodParticleReset : MonoBehaviour
     {

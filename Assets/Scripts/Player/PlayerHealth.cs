@@ -1,16 +1,29 @@
+using System;
+using Scripts.Systems;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Scripts.Player
 {
     public class PlayerHealth : MonoBehaviour
     {
-        [SerializeField] private float health;
-        [SerializeField] private float invincibilityDuration;
+        [SerializeField] private float health = 100f;
+        [SerializeField] private float invincibilityDuration = .1f;
+        private float _invincibilityTimer;
+        [SerializeField] private float damage = 1f;
+        public UISystem ui;
 
-        private void TakeDamage(float damage)
+        private void Update()
         {
-            health -= damage;
+            ui.ReturnHealthValue(health);
+        }
+
+        public void TakeDamage()
+        {
+            if (_invincibilityTimer < Time.time)
+            {
+                health -= damage;
+                _invincibilityTimer = Time.time + invincibilityDuration;
+            }
         }
         
     }

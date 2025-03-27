@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Scripts.Systems
+namespace Scripts.New_Systems
 {
     public class Hoard : MonoBehaviour
     {

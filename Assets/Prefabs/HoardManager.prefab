@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cb08bd04404f72942e3f439e0947d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoards:
+  hoards:
   - {fileID: 0}
-  - {fileID: 0}
-  _currentHoardValues: 
-  _totalHoardValue: 0
   hoardPercentage: 0
+  ui: {fileID: 0}

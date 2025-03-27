@@ -1,33 +1,29 @@
-using Scripts.Systems;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Scripts.New_Systems;
 
 namespace Scripts.Enemies
 {
     public class CollectTreasure: MonoBehaviour
     {
-        private SpriteRenderer _spriteRenderer;
-        [SerializeField] private int purse = 10;
-        [SerializeField] private int bagSpace = 30;
-        [FormerlySerializedAs("treasure")] [SerializeField] private GameObject treasureToDrop;
-        private TreasureManager _treasurePicked;
+        [SerializeField] private int gold = 10;
+        [SerializeField] private int stealAmount = 30;
+        public int stolenTreasure;
         
-        private void Start()
+        private Hoard _hoardPilfered;
+        
+        public void PickupTreasure(Hoard hoard)
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-        public void PickupTreasure(ref int tv, TreasureManager treasureParent)
-        {
-            _spriteRenderer.color = Color.yellow;
-            _treasurePicked = treasureParent;
-            tv -= bagSpace;
-        }
-
-        public void DropTreasure()
-        {
-            var clone = Instantiate(treasureToDrop, transform.position, Quaternion.identity);
-            clone.GetComponent<Treasure>().parentTreasure = _treasurePicked;
+            _hoardPilfered = hoard;
+            if (_hoardPilfered.currentHoardValue < 30)
+            {
+                _hoardPilfered.currentHoardValue -= _hoardPilfered.currentHoardValue;
+                stolenTreasure += _hoardPilfered.currentHoardValue + gold;
+            }
+            else
+            {
+                _hoardPilfered.currentHoardValue -= stealAmount;
+                stolenTreasure += stealAmount + gold;
+            }
         }
     }
 }

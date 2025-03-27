@@ -1,3 +1,4 @@
+using Scripts.New_Systems;
 using UnityEngine;
 
 namespace Scripts.Enemies
@@ -6,21 +7,25 @@ namespace Scripts.Enemies
     {
         [SerializeField] private float arrowSpeed; 
         private Rigidbody2D _rigidbody;
+        private ObjectPool _objectPool;
         
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _objectPool = ObjectPool.Instance;
         }
 
         public void SetDirection(Vector2 direction)
         {
             _rigidbody.linearVelocity = direction.normalized * arrowSpeed;
-            print("I am arrow");
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Destroy(gameObject);
+            if (other.CompareTag("Player") || other.CompareTag("Wall"))
+            {
+                _objectPool.ReturnPooledObject(gameObject);
+            }
         }
     }
 }

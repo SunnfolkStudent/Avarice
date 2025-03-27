@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
-using Scripts.Systems;
+using Scripts.New_Systems;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
+
 
 namespace Scripts.Enemies
 {
@@ -122,7 +121,6 @@ namespace Scripts.Enemies
 
         private void FleeState()
         {
-            
             Vector3 direction = transform.position - _target.position;
             Vector3 newPosition = transform.position + direction;
             

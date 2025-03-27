@@ -1,4 +1,6 @@
 using System.Collections;
+using New_Systems;
+using Scripts.New_Systems;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,23 +11,26 @@ namespace Scripts.Enemies
     {
         public Transform stairsTarget;
         public Transform currentTarget;
-        private NavMeshAgent _agent;
+      
         public bool carryingTreasure;
-        private ObjectPool _objectPool;
-
+       
         private Vector2 _velocity = Vector2.zero;
-        
-        private Animator _animator;
-        public bool archer;
         private bool _go;
-        private SpriteRenderer _spriteRenderer;
+        
+
         private bool _isDead = false;
+        private ObjectPool _objectPool;
+        private NavMeshAgent _agent;
+        private Animator _animator;
+        private SpriteRenderer _spriteRenderer;
+        private CollectTreasure _collectTreasure;
 
     
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _collectTreasure = GetComponent<CollectTreasure>();
         }
 
         private void Start()
@@ -62,7 +67,8 @@ namespace Scripts.Enemies
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag($"Hoard")) return;
-            if (archer) return;
+            
+            _collectTreasure.PickupTreasure(other.transform.GetComponent<Hoard>());
             
             carryingTreasure = true;
             
@@ -76,6 +82,8 @@ namespace Scripts.Enemies
         { 
             if (other.CompareTag("Player") && !_isDead)
             {
+                var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
+                clone.GetComponent<TreasureDrop>().treasureValue = _collectTreasure.stolenTreasure;
                 _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
                 _isDead = true;
             }

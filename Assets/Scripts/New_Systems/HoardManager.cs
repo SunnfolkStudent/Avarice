@@ -1,22 +1,24 @@
 using System.Linq;
+using Scripts.Systems;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Scripts.Systems
+namespace Scripts.New_Systems
 {
     public class HoardManager : MonoBehaviour
     {
-        [FormerlySerializedAs("_hoards")] public Hoard[] hoards;
-        [FormerlySerializedAs("_currentHoardValues")] public int[] currentHoardValues;
-        [FormerlySerializedAs("_totalHoardValue")] public int totalHoardValue;
+        public Hoard[] hoards;
+        private int[] _currentHoardValues;
+        private int _totalHoardValue;
         private int _previousHoardTotal;
         public float hoardPercentage;
+
+        public UISystem ui;
 
         
         private void Start()
         {
             hoards = FindObjectsByType<Hoard>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-            currentHoardValues = new int[hoards.Length];
+            _currentHoardValues = new int[hoards.Length];
             
             for (int i = 0; i < hoards.Length; i++)
             {
@@ -28,25 +30,27 @@ namespace Scripts.Systems
         {
             for (int i = 0; i < hoards.Length; i++)
             {
-                if (hoards[i].currentHoardValue != currentHoardValues[i])
+                if (hoards[i].currentHoardValue != _currentHoardValues[i])
                 {
                     UpdateHoardValue(i);
                 }
             }
             
-            hoardPercentage = ((float)totalHoardValue/1000)*100f;
+            hoardPercentage = ((float)_totalHoardValue/1000)*100f;
+            
+            ui.ReturnTreasureValue(HoardValue());
             //print("Hoard Value: "+ hoardPercentage +"%");
         }
 
-        public int HoardValue()
+        private int HoardValue()
         {
             return (int)hoardPercentage;
         }
 
         private void UpdateHoardValue(int i)
         {
-            currentHoardValues[i] = hoards[i].currentHoardValue;
-            totalHoardValue = currentHoardValues.Sum();
+            _currentHoardValues[i] = hoards[i].currentHoardValue;
+            _totalHoardValue = _currentHoardValues.Sum();
         }
         
     }
