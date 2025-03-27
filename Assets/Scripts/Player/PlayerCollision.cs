@@ -1,10 +1,17 @@
-using System;
+using Scripts.Systems;
 using UnityEngine;
 
 namespace Scripts.Player
 {
     public class PlayerCollision : MonoBehaviour
     {
+        private ObjectPool _objectPool;
+
+        private void Awake()
+        {
+            _objectPool = ObjectPool.Instance;
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag($"Enemy"))

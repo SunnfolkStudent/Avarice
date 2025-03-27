@@ -18,7 +18,7 @@ namespace Scripts.Systems
         }
 
         public List<Pool> pools;
-
+        
         #region SINGLETON
         public static ObjectPool Instance;
         private void Awake()
@@ -83,7 +83,7 @@ namespace Scripts.Systems
             }
             return objectToSpawn;
         }
-
+        
         public void ReturnPooledObject(GameObject obj)
         {
             obj.SetActive(false);

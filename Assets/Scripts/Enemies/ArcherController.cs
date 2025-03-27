@@ -3,6 +3,8 @@ using System.Collections;
 using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Scripts.Enemies
 {
@@ -16,20 +18,22 @@ namespace Scripts.Enemies
         private bool _go;
         
         [Header("Components")]
+        [SerializeField] private GameObject bloodSplatter;
         private NavMeshAgent _agent;
         private ObjectPool _objectPool;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
-
-
+        
         [Header("Ranges")] 
-        private float _followRange = 8f;
-        private float _attackRange = 6f;
-        private float _fleeRange = 4f;
+        [SerializeField] private float followRange = 8f;
+        [SerializeField] private float attackRange = 6f;
+        [SerializeField] private float fleeRange = 4f;
         
         [Header("Attack")]
         [SerializeField] private float attackInterval;
         private float _attackIntervalCounter;
+        private bool _isDead;
+  
         
         private enum States
         {
@@ -45,6 +49,7 @@ namespace Scripts.Enemies
             _agent = GetComponent<NavMeshAgent>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
+
             _objectPool = ObjectPool.Instance;
             _animator.Play($"Walk");
             _state = States.Follow;
@@ -55,12 +60,7 @@ namespace Scripts.Enemies
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _agent.updatePosition = false;
-        }
-
-        private void OnDisable()
-        {
-            //TODO: VFX
-            
+            _isDead = false;
         }
 
         public void SetTarget(Transform target)
@@ -106,12 +106,12 @@ namespace Scripts.Enemies
             
             #region SETSTATE
             
-            if (Vector2.Distance(_target.position, transform.position) > _followRange)
+            if (Vector2.Distance(_target.position, transform.position) > followRange)
             {
                 _agent.enabled = true;
                 _state = States.Follow;
             }
-            else if (Vector2.Distance(_target.position, transform.position) < _fleeRange)
+            else if (Vector2.Distance(_target.position, transform.position) < fleeRange)
             {
                 _agent.enabled = true;
                 _state = States.Flee;
@@ -129,12 +129,12 @@ namespace Scripts.Enemies
             SetMovement(newPosition);
             #region SETSTATE
             
-            if (Vector2.Distance(_target.position,transform.position) > _attackRange)
+            if (Vector2.Distance(_target.position,transform.position) > attackRange)
             {
                 _agent.enabled = false;
                 _state = States.Attack;
             }
-            else if (Vector2.Distance(_target.position, transform.position) > _followRange)
+            else if (Vector2.Distance(_target.position, transform.position) > followRange)
             {
                 _agent.enabled = true;
                 _state = States.Follow;
@@ -149,12 +149,12 @@ namespace Scripts.Enemies
 
             #region SETSTATE
 
-            if (Vector2.Distance(_target.position, transform.position) < _attackRange)
+            if (Vector2.Distance(_target.position, transform.position) < attackRange)
             {
                 _agent.enabled = false;
                 _state = States.Attack;
             }
-            else if (Vector2.Distance(_target.position, transform.position) < _fleeRange)
+            else if (Vector2.Distance(_target.position, transform.position) < fleeRange)
             {
                 _agent.enabled = true;
                 _state = States.Flee;
@@ -172,10 +172,12 @@ namespace Scripts.Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && !_isDead)
             {
+                _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
+                _isDead = true;
             }
         }
 

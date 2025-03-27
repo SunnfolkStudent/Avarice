@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace Scripts.Enemies
 {
-    public class CollectorController: MonoBehaviour, IPooledObject
+    public class CollectorController: MonoBehaviour
     {
         public Transform stairsTarget;
         public Transform currentTarget;
@@ -19,7 +19,9 @@ namespace Scripts.Enemies
         public bool archer;
         private bool _go;
         private SpriteRenderer _spriteRenderer;
+        private bool _isDead = false;
 
+    
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
@@ -35,7 +37,12 @@ namespace Scripts.Enemies
 
         private void OnEnable()
         {
-            OnObjectSpawn();
+            _agent.updateRotation = false;
+            _agent.updateUpAxis = false;
+            _agent.updatePosition = false;
+            carryingTreasure = false;
+            _agent.obstacleAvoidanceType = ObstacleAvoidanceType.HighQualityObstacleAvoidance;
+            _isDead = false;
         }
 
         public void SetTarget(Transform target, Transform spawn)
@@ -43,14 +50,6 @@ namespace Scripts.Enemies
             currentTarget = target;
             stairsTarget = spawn;
             StartCoroutine(WaitForActivate());
-        }
-
-        public void OnObjectSpawn()
-        {
-            _agent.updateRotation = false;
-            _agent.updateUpAxis = false;
-            _agent.updatePosition = false;
-            carryingTreasure = false;
         }
         
         private void Update()
@@ -75,6 +74,11 @@ namespace Scripts.Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
+            if (other.CompareTag("Player") && !_isDead)
+            {
+                _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
+                _isDead = true;
+            }
             if ((other.CompareTag($"Stairs") && carryingTreasure) || other.CompareTag("Player"))
             {
                 ResetAgent(false);

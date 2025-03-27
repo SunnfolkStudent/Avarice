@@ -119,12 +119,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 2879834959553143133, guid: 26d5221f2d8eef7439c6b51f6ea7f357, type: 3}
+  m_Sprite: {fileID: 6485592051015802690, guid: 860e016d3598c4523b169fe052029771, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.875, y: 1.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccb1a24d897453ea5033e47b4aa2bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodSplatter: {fileID: 6376573353425838077, guid: 750bdf7c24b344d88a2d58d30c0e2461, type: 3}
 --- !u!58 &5907449272639204708
 CircleCollider2D:
   m_ObjectHideFlags: 0
