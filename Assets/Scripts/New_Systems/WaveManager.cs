@@ -39,7 +39,7 @@ public class WaveManager : MonoBehaviour
         if (waves[currentWave].key == "Collector")
         {
             print("Collector");
-            clone.GetComponent<Scripts.Enemies.Movement>().SetTarget(target, spawn);
+            clone.GetComponent<Scripts.Enemies.CollectorController>().SetTarget(target, spawn);
         }
         else if (waves[currentWave].key == "Archer")
         {

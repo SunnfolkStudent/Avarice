@@ -23,9 +23,9 @@ namespace Scripts.Enemies
 
 
         [Header("Ranges")] 
-        private float _maxRange = 8f;
-        private float _mediumRange = 6f;
-        private float _minRange = 4f;
+        private float _followRange = 8f;
+        private float _attackRange = 6f;
+        private float _fleeRange = 4f;
         
         [Header("Attack")]
         [SerializeField] private float attackInterval;
@@ -33,7 +33,7 @@ namespace Scripts.Enemies
         
         private enum States
         {
-            Approach,
+            Follow,
             Attack,
             Flee,
         }
@@ -47,7 +47,7 @@ namespace Scripts.Enemies
             _animator = GetComponent<Animator>();
             _objectPool = ObjectPool.Instance;
             _animator.Play($"Walk");
-            _state = States.Approach;
+            _state = States.Follow;
         }
 
         private void OnEnable()
@@ -55,6 +55,12 @@ namespace Scripts.Enemies
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
             _agent.updatePosition = false;
+        }
+
+        private void OnDisable()
+        {
+            //TODO: VFX
+            
         }
 
         public void SetTarget(Transform target)
@@ -71,8 +77,8 @@ namespace Scripts.Enemies
             print(_state);
             switch (_state)
             {
-                case States.Approach:
-                    ApproachState();
+                case States.Follow:
+                    FollowState();
                     break;
                 case States.Flee:
                     FleeState();
@@ -100,12 +106,12 @@ namespace Scripts.Enemies
             
             #region SETSTATE
             
-            if (Vector2.Distance(_target.position, transform.position) > _maxRange)
+            if (Vector2.Distance(_target.position, transform.position) > _followRange)
             {
                 _agent.enabled = true;
-                _state = States.Approach;
+                _state = States.Follow;
             }
-            else if (Vector2.Distance(_target.position, transform.position) < _minRange)
+            else if (Vector2.Distance(_target.position, transform.position) < _fleeRange)
             {
                 _agent.enabled = true;
                 _state = States.Flee;
@@ -123,32 +129,32 @@ namespace Scripts.Enemies
             SetMovement(newPosition);
             #region SETSTATE
             
-            if (Vector2.Distance(_target.position,transform.position) > _mediumRange)
+            if (Vector2.Distance(_target.position,transform.position) > _attackRange)
             {
                 _agent.enabled = false;
                 _state = States.Attack;
             }
-            else if (Vector2.Distance(_target.position, transform.position) > _maxRange)
+            else if (Vector2.Distance(_target.position, transform.position) > _followRange)
             {
                 _agent.enabled = true;
-                _state = States.Approach;
+                _state = States.Follow;
             }
 
             #endregion
         }
 
-        private void ApproachState()
+        private void FollowState()
         {
             SetMovement(_currentTarget.position);
 
             #region SETSTATE
 
-            if (Vector2.Distance(_target.position, transform.position) < _mediumRange)
+            if (Vector2.Distance(_target.position, transform.position) < _attackRange)
             {
                 _agent.enabled = false;
                 _state = States.Attack;
             }
-            else if (Vector2.Distance(_target.position, transform.position) < _minRange)
+            else if (Vector2.Distance(_target.position, transform.position) < _fleeRange)
             {
                 _agent.enabled = true;
                 _state = States.Flee;
