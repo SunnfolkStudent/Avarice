@@ -1,11 +1,11 @@
+using System;
 using System.Collections.Generic;
-using Scripts.Enemies;
 using Scripts.New_Systems;
 using UnityEngine;
 
 namespace Scripts.Player
 {
-    public class Fireball : MonoBehaviour, IPooledObject
+    public class Fireball : MonoBehaviour
     {
         public Vector2[] directions = new []
         {
@@ -13,30 +13,55 @@ namespace Scripts.Player
             new Vector2(1,1), new Vector2(-1,1), new Vector2(1,-1),
             new Vector2(-1,-1)
         };
-
+        
+        public float speed = 6;
+        public float timeToExplosion = 1;
+        private float _timeToExplosionCounter;
+        
         private ObjectPool _objectPool;
+        private Rigidbody2D _rigidbody2D;
+        
 
-        private void Start()
+        private void Awake()
         {
             _objectPool = ObjectPool.Instance;
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnEnable()
+        {
+            _timeToExplosionCounter = Time.time + timeToExplosion;
         }
 
         private List<int> _collisionID;
-        
-        public void OnObjectSpawn()
+
+        public void SetMovement(Vector2 direction)
         {
-            
+            _rigidbody2D.linearVelocity = direction * speed;
         }
 
         private void Update()
         {
+            if (_timeToExplosionCounter < Time.time)
+            {
+                var clone =_objectPool.SpawnFromPools("Explosions", transform, Quaternion.identity);
+                _objectPool.ReturnPooledObject(gameObject);
+            }
             foreach (var direction in directions)
             {
                 Debug.DrawRay(transform.position, direction, Color.red);
             }
         }
 
-        public void OnDetonation()
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Wall"))
+            {
+                _timeToExplosionCounter = 0;
+            }
+        }
+
+        /*public void OnDetonation()
         {
             var get = Physics2D.OverlapCircleAll(transform.position, 5f);
             
@@ -60,7 +85,7 @@ namespace Scripts.Player
                 }
             }
            
-        }
+        }*/
 
         private void OnGUI()
         {

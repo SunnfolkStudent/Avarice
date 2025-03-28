@@ -67,6 +67,7 @@ Transform:
   - {fileID: 3977050718851265560}
   - {fileID: 3985021625437746592}
   - {fileID: 7590957865737641227}
+  - {fileID: 5800229257947043232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1837996918474046102
@@ -107,10 +108,15 @@ MonoBehaviour:
     objectToSpawn: {fileID: 7932493592663577528, guid: f7986c359da6c43b0b6ab4b5a89dbf56, type: 3}
     objectParent: {fileID: 3985021625437746592}
     spawnCount: 30
-  - key: Fireball
+  - key: Fireballs
     objectPool: []
     objectToSpawn: {fileID: 8627254113787973304, guid: 0a6431b3b7a844d6aad96c41cd25efda, type: 3}
     objectParent: {fileID: 7590957865737641227}
+    spawnCount: 3
+  - key: Explosions
+    objectPool: []
+    objectToSpawn: {fileID: 457327172016397228, guid: f2836d09a0b404453a01a5ad212844c6, type: 3}
+    objectParent: {fileID: 5800229257947043232}
     spawnCount: 3
 --- !u!1 &2273016204387377599
 GameObject:
@@ -166,6 +172,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2942775392235147346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 228742848130405576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3585009331534131399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5800229257947043232}
+  m_Layer: 0
+  m_Name: ExplosionParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5800229257947043232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585009331534131399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}

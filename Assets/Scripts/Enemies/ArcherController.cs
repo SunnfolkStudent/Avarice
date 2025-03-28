@@ -170,13 +170,20 @@ namespace Scripts.Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if (other.CompareTag("Player") && !_isDead)
+            if ((other.CompareTag("Player") || other.CompareTag("Fireball")) && !_isDead)
             {
                 _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
                 _isDead = true;
             }
+            /*else if (other.CompareTag("Fireball") && !_isDead)
+            {
+                _objectPool.SpawnFromPools("Skeletons", transform, Quaternion.identity);
+                ResetAgent(false);
+                _objectPool.ReturnPooledObject(gameObject);
+                _isDead = true;
+            }*/
         }
 
         private void ResetAgent(bool setValue)

@@ -34,7 +34,7 @@ namespace Scripts.Player
             if (_movement.IsStunned) return;
             if (_movement.IsDashing) return;
             _movement.UpdateMovement(_input.DashAttack,_input.MoveDirection);
-            //_attacks.UpdateFireball(_input.FireBallAttack, _input.MoveDirection);
+            _attacks.UpdateFireball(_input.FireBallAttack, _input.MoveDirection);
             _navMeshObstacle.enabled = _input.MoveDirection == Vector2.zero;
         }
     }
