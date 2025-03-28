@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 329215a253edeca4ea172dd4ffe8128a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3138742017338245920
+    second: Timeless studios 2 white alt_0
+  - first:
+      213: -7754190839013000252
+    second: Timeless studios 2 white alt_1
+  - first:
+      213: -3357140583744238040
+    second: Timeless studios 2 white alt_2
+  - first:
+      213: 925431436075289131
+    second: Timeless studios 2 white alt_3
+  - first:
+      213: 685564803893026162
+    second: Timeless studios 2 white alt_4
+  - first:
+      213: 9040137136866459779
+    second: Timeless studios 2 white alt_5
+  - first:
+      213: -949319995980570040
+    second: Timeless studios 2 white alt_6
+  - first:
+      213: 1569883513094472390
+    second: Timeless studios 2 white alt_7
+  - first:
+      213: 4310904345433181086
+    second: Timeless studios 2 white alt_8
+  - first:
+      213: 7736840223151832771
+    second: Timeless studios 2 white alt_9
+  - first:
+      213: -3819125090135855469
+    second: Timeless studios 2 white alt_10
+  - first:
+      213: -1133797602236895936
+    second: Timeless studios 2 white alt_11
+  - first:
+      213: 1512196115857150824
+    second: Timeless studios 2 white alt_12
+  - first:
+      213: -30453464738285552
+    second: Timeless studios 2 white alt_13
+  - first:
+      213: -3688366055952347680
+    second: Timeless studios 2 white alt_14
+  - first:
+      213: 5594488228913972138
+    second: Timeless studios 2 white alt_15
+  - first:
+      213: -7612683581849976405
+    second: Timeless studios 2 white alt_16
+  - first:
+      213: 2671630283667970313
+    second: Timeless studios 2 white alt_17
+  - first:
+      213: 1074379934860059272
+    second: Timeless studios 2 white alt_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 157
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecf5f6d3c2f074d0800000000000000
+      internalID: -3138742017338245920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 257
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbba00f384936490800000000000000
+      internalID: -7754190839013000252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_2
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 88
+        width: 244
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e80ec0d6a0961d0800000000000000
+      internalID: -3357140583744238040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 89
+        width: 71
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a4f3becfac7dc00800000000000000
+      internalID: 925431436075289131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_4
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 89
+        width: 226
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ddd8e8e8d938900800000000000000
+      internalID: 685564803893026162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_5
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 89
+        width: 126
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3800ebb44d4057d70800000000000000
+      internalID: 9040137136866459779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 89
+        width: 136
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842276d4e7653d2f0800000000000000
+      internalID: -949319995980570040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_7
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 89
+        width: 127
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c20db0dcb859c510800000000000000
+      internalID: 1569883513094472390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_8
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 87
+        width: 111
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b8b3a79a863db30800000000000000
+      internalID: 4310904345433181086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_9
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 87
+        width: 110
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce3be00137ce5b60800000000000000
+      internalID: 7736840223151832771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_10
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 33
+        width: 191
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39eaba117fdbffac0800000000000000
+      internalID: -3819125090135855469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_11
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 30
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04dea7f7611f340f0800000000000000
+      internalID: -1133797602236895936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_12
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 30
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863146cfa566cf410800000000000000
+      internalID: 1512196115857150824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_13
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 29
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01838143cbec39ff0800000000000000
+      internalID: -30453464738285552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_14
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 30
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed0a592d9a40dcc0800000000000000
+      internalID: -3688366055952347680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 30
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa38580476d93ad40800000000000000
+      internalID: 5594488228913972138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_16
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 64
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba14264bd905a5690800000000000000
+      internalID: -7612683581849976405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_17
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 30
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909943d8699831520800000000000000
+      internalID: 2671630283667970313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Timeless studios 2 white alt_18
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 0
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8822423cbd6f8ee00800000000000000
+      internalID: 1074379934860059272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Timeless studios 2 white alt_0: -3138742017338245920
+      Timeless studios 2 white alt_1: -7754190839013000252
+      Timeless studios 2 white alt_10: -3819125090135855469
+      Timeless studios 2 white alt_11: -1133797602236895936
+      Timeless studios 2 white alt_12: 1512196115857150824
+      Timeless studios 2 white alt_13: -30453464738285552
+      Timeless studios 2 white alt_14: -3688366055952347680
+      Timeless studios 2 white alt_15: 5594488228913972138
+      Timeless studios 2 white alt_16: -7612683581849976405
+      Timeless studios 2 white alt_17: 2671630283667970313
+      Timeless studios 2 white alt_18: 1074379934860059272
+      Timeless studios 2 white alt_2: -3357140583744238040
+      Timeless studios 2 white alt_3: 925431436075289131
+      Timeless studios 2 white alt_4: 685564803893026162
+      Timeless studios 2 white alt_5: 9040137136866459779
+      Timeless studios 2 white alt_6: -949319995980570040
+      Timeless studios 2 white alt_7: 1569883513094472390
+      Timeless studios 2 white alt_8: 4310904345433181086
+      Timeless studios 2 white alt_9: 7736840223151832771
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
