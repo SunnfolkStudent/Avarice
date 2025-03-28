@@ -1,7 +1,5 @@
 using System.Collections;
-using New_Systems;
 using Scripts.New_Systems;
-using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -80,13 +78,16 @@ namespace Scripts.Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if (other.CompareTag("Player") && !_isDead)
+            if ((other.CompareTag("Player") || other.CompareTag("Fireball")) && !_isDead)
             {
                 if (carryingTreasure)
                 {
                     var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
-                    clone.GetComponent<TreasureDrop>().treasureValue = _collectTreasure.stolenTreasure;
+                    var script = clone.GetComponent<TreasureDrop>();
+                    script.treasureValue = _collectTreasure.stolenTreasure;
+                    script.originHoard = _collectTreasure._hoardPilfered;
                 }
+                
                 _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
                 _isDead = true;
                 ResetAgent(false);

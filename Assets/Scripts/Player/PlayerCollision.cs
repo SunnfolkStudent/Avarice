@@ -18,21 +18,11 @@ namespace Scripts.Player
             {
                 SendMessage("TakeDamage");
             }
-            if (other.CompareTag($"Enemy"))
-            {
-                /*if (other.GetComponent<Enemies.Movement>().carryingTreasure)
-                {
-                    other.GetComponent<CollectTreasure>().DropTreasure();
-                }*/
-                //other.gameObject.SetActive(false); 
-            }
 
-            /*if (other.CompareTag("Treasure"))
+            if (other.CompareTag("Treasure"))
             {
-                var tm = other.GetComponent<DroppedTreasure>();
-                tm._parentTreasure.treasureValue += tm.treasureValue;
-                Object.Destroy(other.gameObject);
-            }*/
+                other.GetComponent<TreasureDrop>().ReturnToOriginHoard();
+            }
         }
     }
 }

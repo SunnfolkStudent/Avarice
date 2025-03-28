@@ -9,12 +9,12 @@ namespace Scripts.Enemies
         [SerializeField] private int stealAmount = 30;
         public int stolenTreasure;
         
-        private Hoard _hoardPilfered;
+        public Hoard _hoardPilfered;
         
         public void PickupTreasure(Hoard hoard)
         {
             _hoardPilfered = hoard;
-            if (_hoardPilfered.currentHoardValue < 30)
+            if (_hoardPilfered.currentHoardValue < stealAmount)
             {
                 _hoardPilfered.currentHoardValue -= _hoardPilfered.currentHoardValue;
                 stolenTreasure += _hoardPilfered.currentHoardValue + gold;

@@ -120,9 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee91597d19b1467a976be42aa5d75229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purse: 10
-  bagSpace: 30
-  treasureToDrop: {fileID: 4074979344235194456, guid: fc31955ae1a864c3fb0eb81379f8a552, type: 3}
+  gold: 1
+  stealAmount: 10
+  stolenTreasure: 0
+  _hoardPilfered: {fileID: 0}
 --- !u!114 &4686654135305180926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +139,6 @@ MonoBehaviour:
   stairsTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   carryingTreasure: 0
-  archer: 0
 --- !u!212 &3315833764078623759
 SpriteRenderer:
   m_ObjectHideFlags: 0

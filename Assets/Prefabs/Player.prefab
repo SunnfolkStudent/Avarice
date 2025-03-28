@@ -222,7 +222,7 @@ MonoBehaviour:
   moveSpeed: 5
   dashSpeed: 15
   dashDuration: 0.5
-  dashCooldown: 5
+  dashCooldown: 2
   stunDuration: 1.5
   dashClip: {fileID: 8300000, guid: d7b853460738749209e4a23cdb7bdaa9, type: 3}
 --- !u!114 &2251410350618015566
