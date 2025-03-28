@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 331800056}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16804,7 +16804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: waves.Array.data[18].timeToNextWave
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: waves.Array.data[0].targets.Array.size
@@ -17060,7 +17060,7 @@ PrefabInstance:
       objectReference: {fileID: 1346715054}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: waves.Array.data[16].spawnPoint.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: 'waves.Array.data[16].targets.Array.data[0]'
@@ -17077,7 +17077,7 @@ PrefabInstance:
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: 'waves.Array.data[17].targets.Array.data[0]'
       value: 
-      objectReference: {fileID: 1992119333}
+      objectReference: {fileID: 1610276927}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: 'waves.Array.data[17].targets.Array.data[1]'
       value: 
@@ -17213,7 +17213,7 @@ PrefabInstance:
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: 'waves.Array.data[16].spawnPoint.Array.data[0]'
       value: 
-      objectReference: {fileID: 202408676}
+      objectReference: {fileID: 2030923714}
     - target: {fileID: 4693045789666935261, guid: 5f43a8472b3cf44f7b0f218ad091936a, type: 3}
       propertyPath: 'waves.Array.data[16].spawnPoint.Array.data[1]'
       value: 
