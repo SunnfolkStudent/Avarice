@@ -244,10 +244,21 @@
                 {
                     "name": "",
                     "id": "ab3017bb-2bd3-4368-9a0a-b0160c1b36f9",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Fireball",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c8f44d93-f489-444f-a68f-b8a6a0f18470",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Fireball",
                     "isComposite": false,
                     "isPartOfComposite": false

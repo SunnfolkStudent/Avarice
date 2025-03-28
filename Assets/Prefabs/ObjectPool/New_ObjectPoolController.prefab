@@ -108,7 +108,7 @@ MonoBehaviour:
     objectToSpawn: {fileID: 7932493592663577528, guid: f7986c359da6c43b0b6ab4b5a89dbf56, type: 3}
     objectParent: {fileID: 3985021625437746592}
     spawnCount: 30
-  - key: Fireballs
+  - key: Fireball
     objectPool: []
     objectToSpawn: {fileID: 8627254113787973304, guid: 0a6431b3b7a844d6aad96c41cd25efda, type: 3}
     objectParent: {fileID: 7590957865737641227}

@@ -12133,22 +12133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478966749215177474, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: collectTreasure.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478966749215177474, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: 'collectTreasure.Array.data[0]'
+    - target: {fileID: 170757808412155642, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
+      propertyPath: shootClip
       value: 
-      objectReference: {fileID: 8300000, guid: b2b7aef830e76465d9eaec3fba57b1bf, type: 3}
-    - target: {fileID: 4478966749215177474, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: 'collectTreasure.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 9d65fac101a46499ca51b6e2459f04d2, type: 3}
+      objectReference: {fileID: 8300000, guid: 0bb726a22bf3849af8d26ce6fe29e14d, type: 3}
     - target: {fileID: 5781467900313291149, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16903,7 +16891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8983460631642843396, guid: 2c82b9938c5a649a580a18f074d98bed, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

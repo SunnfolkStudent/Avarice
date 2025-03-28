@@ -9,9 +9,13 @@ namespace Scripts.Player
         private float _fireballTimeCounter;
         
         [SerializeField] private Transform[] fireballSpawnPoints;
-        private Transform _fireballSpawnPoint;
+        public Transform _fireballSpawnPoint;
         private ObjectPool _objectPool;
-        private Vector2 _storedDirection;
+        public Vector2 _storedDirection;
+        
+        private AudioSource _audioSource;
+        public AudioClip shootClip;
+        
         private readonly Vector2[] _directions = new []
         {
             Vector2.up, Vector2.right, Vector2.down, Vector2.left, 
@@ -22,6 +26,8 @@ namespace Scripts.Player
         private void Start()
         {
             _objectPool = ObjectPool.Instance;
+            _audioSource = GetComponent<AudioSource>();
+            _fireballSpawnPoint = fireballSpawnPoints[0];
         }
         
         
@@ -31,6 +37,7 @@ namespace Scripts.Player
             {
                 _storedDirection = moveDirection;
                 _storedDirection.Normalize();
+                
                 if (_storedDirection.x != 0)
                 {
                    _storedDirection.x = Mathf.Sign(_storedDirection.x);
@@ -39,7 +46,6 @@ namespace Scripts.Player
                 {
                     _storedDirection.y = Mathf.Sign(_storedDirection.y);
                 }
-      
             }
             
             if (shoot && _fireballTimeCounter < Time.time)
@@ -49,8 +55,10 @@ namespace Scripts.Player
                     if (_storedDirection == _directions[i])
                     {
                         _fireballSpawnPoint = fireballSpawnPoints[i];
-                        var fireball = _objectPool.SpawnFromPools("Fireballs", _fireballSpawnPoint, Quaternion.identity );
-                        fireball.GetComponent<Fireball>().SetMovement(_storedDirection);
+                        _audioSource.PlayOneShot(shootClip);
+                        
+                        var clone = _objectPool.SpawnFromPools("Fireball", _fireballSpawnPoint, Quaternion.identity );
+                        clone.GetComponent<Fireball>().SetMovement(_storedDirection);
                         _fireballTimeCounter = Time.time + fireballInterval;
                     }
                 }

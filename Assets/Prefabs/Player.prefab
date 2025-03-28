@@ -282,7 +282,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6485592051015802690, guid: 860e016d3598c4523b169fe052029771, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e07982309074ebc82de914f014d0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballInterval: 0
+  fireballInterval: 1
   fireballSpawnPoints:
   - {fileID: 5578502973769259963}
   - {fileID: 5478601497638183693}
@@ -421,6 +421,7 @@ MonoBehaviour:
   - {fileID: 2183416692231456644}
   - {fileID: 4671529644528158092}
   - {fileID: 8304580952702620974}
+  shootClip: {fileID: 8300000, guid: caa71a19745144178aa2021e7f27b8e8, type: 3}
 --- !u!114 &3924633644161360315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +486,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: {fileID: 8300000, guid: e859d3c168b2a494a88ee72d95b7c341, type: 3}
+  collectTreasure:
+  - {fileID: 8300000, guid: b2b7aef830e76465d9eaec3fba57b1bf, type: 3}
+  - {fileID: 8300000, guid: 9d65fac101a46499ca51b6e2459f04d2, type: 3}
 --- !u!58 &5907449272639204708
 CircleCollider2D:
   m_ObjectHideFlags: 0

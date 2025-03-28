@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Scripts.New_Systems;
 using UnityEngine;
@@ -44,7 +43,7 @@ namespace Scripts.Player
         {
             if (_timeToExplosionCounter < Time.time)
             {
-                var clone =_objectPool.SpawnFromPools("Explosions", transform, Quaternion.identity);
+                _objectPool.SpawnFromPools("Explosions", transform, Quaternion.identity);
                 _objectPool.ReturnPooledObject(gameObject);
             }
             foreach (var direction in directions)
