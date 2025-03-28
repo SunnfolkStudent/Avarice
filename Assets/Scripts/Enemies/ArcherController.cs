@@ -33,6 +33,9 @@ namespace Scripts.Enemies
         private float _attackIntervalCounter;
         private bool _isDead;
   
+        [Header("Audio")]
+        private AudioSource _audioSource;
+        public AudioClip shoot;
         
         private enum States
         {
@@ -48,7 +51,7 @@ namespace Scripts.Enemies
             _agent = GetComponent<NavMeshAgent>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
-
+            _audioSource = GetComponent<AudioSource>();
             _objectPool = ObjectPool.Instance;
             _animator.Play($"Walk");
             _state = States.Follow;
@@ -100,6 +103,7 @@ namespace Scripts.Enemies
                 clone.transform.rotation = Quaternion.FromToRotation(transform.position, targetPos);
                 StartCoroutine(_objectPool.ReturnPooledObject(clone, 5f));
                 _attackIntervalCounter = Time.time + attackInterval;
+                _audioSource.PlayOneShot(shoot);
             }
            
             

@@ -139,6 +139,9 @@ MonoBehaviour:
   stairsTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   carryingTreasure: 0
+  collectGoldSfx:
+  - {fileID: 8300000, guid: b2b7aef830e76465d9eaec3fba57b1bf, type: 3}
+  - {fileID: 8300000, guid: 9d65fac101a46499ca51b6e2459f04d2, type: 3}
 --- !u!212 &3315833764078623759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -320,7 +323,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

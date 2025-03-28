@@ -3,6 +3,7 @@ using Scripts.New_Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 namespace Scripts.Enemies
 {
     public class CollectorController: MonoBehaviour
@@ -16,19 +17,23 @@ namespace Scripts.Enemies
         private bool _go;
         
 
-        private bool _isDead = false;
+        private bool _isDead;
         private ObjectPool _objectPool;
         private NavMeshAgent _agent;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         private CollectTreasure _collectTreasure;
-
+        
+        [Header("Audio")]
+        private AudioSource _audioSource;
+        public AudioClip[] collectGoldSfx;
     
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _collectTreasure = GetComponent<CollectTreasure>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -67,13 +72,14 @@ namespace Scripts.Enemies
             if (!other.gameObject.CompareTag($"Hoard")) return;
             
             _collectTreasure.PickupTreasure(other.transform.GetComponent<Hoard>());
-            
+            _audioSource.PlayOneShot(collectGoldSfx[Random.Range(0, collectGoldSfx.Length)]);
             carryingTreasure = true;
             
             _agent.obstacleAvoidanceType = carryingTreasure ? ObstacleAvoidanceType.NoObstacleAvoidance : ObstacleAvoidanceType.HighQualityObstacleAvoidance;
             currentTarget = stairsTarget;
             _agent.speed /= 2;
             _animator.Play($"Loot");
+            
         }
 
         private void OnTriggerEnter2D(Collider2D other)

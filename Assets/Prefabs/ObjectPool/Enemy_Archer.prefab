@@ -286,6 +286,7 @@ MonoBehaviour:
   attackRange: 6
   fleeRange: 4
   attackInterval: 4
+  shoot: {fileID: 8300000, guid: 9d08f6b4e810d4719a2756b152761be8, type: 3}
 --- !u!82 &-1283509157772669296
 AudioSource:
   m_ObjectHideFlags: 0
