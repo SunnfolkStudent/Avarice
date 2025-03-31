@@ -5,8 +5,8 @@ namespace Scripts.Enemies
 {
     public class CollectTreasure: MonoBehaviour
     {
-        [SerializeField] private int gold = 10;
-        [SerializeField] private int stealAmount = 30;
+        [SerializeField] private int gold = 0;
+        [SerializeField] private int stealAmount = 10;
         public int stolenTreasure;
         
         public Hoard _hoardPilfered;
@@ -17,12 +17,12 @@ namespace Scripts.Enemies
             if (_hoardPilfered.currentHoardValue < stealAmount)
             {
                 _hoardPilfered.currentHoardValue -= _hoardPilfered.currentHoardValue;
-                stolenTreasure += _hoardPilfered.currentHoardValue + gold;
+                stolenTreasure += _hoardPilfered.currentHoardValue;
             }
             else
             {
                 _hoardPilfered.currentHoardValue -= stealAmount;
-                stolenTreasure += stealAmount + gold;
+                stolenTreasure += stealAmount;
             }
         }
     }

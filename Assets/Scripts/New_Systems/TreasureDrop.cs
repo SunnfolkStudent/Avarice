@@ -15,6 +15,7 @@ namespace Scripts.New_Systems
 
         public void ReturnToOriginHoard()
         {
+            print("returned more thaan once?");
             originHoard.currentHoardValue += treasureValue;
             _objectPool.ReturnPooledObject(gameObject);
         }

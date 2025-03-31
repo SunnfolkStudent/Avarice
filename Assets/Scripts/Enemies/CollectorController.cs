@@ -92,6 +92,7 @@ namespace Scripts.Enemies
                     var script = clone.GetComponent<TreasureDrop>();
                     script.treasureValue = _collectTreasure.stolenTreasure;
                     script.originHoard = _collectTreasure._hoardPilfered;
+                    _agent.speed = 3;
                 }
                 
                 _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
@@ -103,6 +104,7 @@ namespace Scripts.Enemies
             {
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
+                _agent.speed = 3;
             }
         }
 
@@ -111,6 +113,7 @@ namespace Scripts.Enemies
             _agent.enabled = setValue;
             _go = setValue;
             _spriteRenderer.enabled = setValue;
+            _collectTreasure.stolenTreasure = 0;
         }
 
         private IEnumerator WaitForActivate()

@@ -28,6 +28,7 @@ namespace Scripts.Player
             {
                 other.GetComponent<TreasureDrop>().ReturnToOriginHoard();
                 _audioSource.PlayOneShot(collectTreasure[Random.Range(0, collectTreasure.Length)]);
+                print("collected once?");
             }
         }
     }
