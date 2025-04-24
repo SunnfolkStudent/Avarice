@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Scripts.New_Systems
+namespace New_Systems
 {
     public class TreasureDrop : MonoBehaviour
     {
