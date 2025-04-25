@@ -21472,7 +21472,7 @@ Animator:
   m_GameObject: {fileID: 905640194}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c840b6c274ca2c45bf9082dff344d35, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a8627e9491014e6288baefc0b0a40cc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21655,7 +21655,7 @@ Animator:
   m_GameObject: {fileID: 1227630806}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c840b6c274ca2c45bf9082dff344d35, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a8627e9491014e6288baefc0b0a40cc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21765,7 +21765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 152139516844322262, guid: 48077f747c6de45ac88b6ef21070f31b, type: 3}
       propertyPath: orthographic size
-      value: 8.43
+      value: 8.4375
       objectReference: {fileID: 0}
     - target: {fileID: 152139516844322262, guid: 48077f747c6de45ac88b6ef21070f31b, type: 3}
       propertyPath: m_NormalizedViewPortRect.width

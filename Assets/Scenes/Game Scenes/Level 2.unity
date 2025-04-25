@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hoard
       objectReference: {fileID: 0}
+    - target: {fileID: 7793993023268530216, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: currentHoardValue
+      value: 800
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

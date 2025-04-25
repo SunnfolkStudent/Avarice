@@ -20992,6 +20992,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7793993023268530216, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: currentHoardValue
       value: 334
@@ -21524,6 +21528,10 @@ PrefabInstance:
     - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049501072068900969, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7793993023268530216, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: currentHoardValue
@@ -22889,7 +22897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7793993023268530216, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: currentHoardValue
-      value: 333
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 9143857099697126573, guid: f9bee319d3e6b4e408cc8a003f82048b, type: 3}
       propertyPath: m_Sprite
