@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Scripts.New_Systems
+namespace New_Systems
 {
     public class ObjectPool : MonoBehaviour
     {

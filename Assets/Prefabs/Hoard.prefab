@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4138259957554599610}
   - component: {fileID: 4724019038971300769}
   - component: {fileID: 7793993023268530216}
-  - component: {fileID: 161392243859442770}
+  - component: {fileID: 7912344565140003313}
   m_Layer: 0
   m_Name: Hoard
   m_TagString: Hoard
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHoardValue: 1000
---- !u!95 &161392243859442770
+--- !u!95 &7912344565140003313
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ Animator:
   m_GameObject: {fileID: 3859000389338523715}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c840b6c274ca2c45bf9082dff344d35, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1a8627e9491014e6288baefc0b0a40cc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

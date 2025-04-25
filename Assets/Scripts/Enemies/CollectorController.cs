@@ -1,10 +1,9 @@
 using System.Collections;
-using Scripts.New_Systems;
+using New_Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-namespace Scripts.Enemies
+namespace Enemies
 {
     public class CollectorController: MonoBehaviour
     {
