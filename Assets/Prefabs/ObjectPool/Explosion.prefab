@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1790723700383483053}
   - component: {fileID: 335123797753255122}
   - component: {fileID: 8349999345477949632}
-  - component: {fileID: 4309374373257613048}
   - component: {fileID: -5356316230426771783}
   - component: {fileID: -8447366940347214552}
+  - component: {fileID: 4309374373257613048}
   - component: {fileID: -8992899742813572647}
   m_Layer: 0
   m_Name: Explosion
@@ -127,29 +127,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 4
---- !u!95 &4309374373257613048
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457327172016397228}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -1353240787187734083, guid: cf6f2f93cf1c84c558e7ad096fe40c4d, type: 3}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Radius: 2.5
 --- !u!50 &-5356316230426771783
 Rigidbody2D:
   serializedVersion: 5
@@ -192,6 +170,28 @@ MonoBehaviour:
   explosion:
   - {fileID: 8300000, guid: ea2a8d9cd63264438a2854792f2a201c, type: 3}
   - {fileID: 8300000, guid: b4b70321274864adeb9001b7c2f267e7, type: 3}
+--- !u!95 &4309374373257613048
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457327172016397228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -1353240787187734083, guid: cf6f2f93cf1c84c558e7ad096fe40c4d, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &-8992899742813572647
 AudioSource:
   m_ObjectHideFlags: 0

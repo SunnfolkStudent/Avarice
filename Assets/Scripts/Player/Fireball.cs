@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using New_Systems;
-using Scripts.New_Systems;
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     public class Fireball : MonoBehaviour
     {
@@ -15,7 +14,7 @@ namespace Scripts.Player
         };
         
         public float speed = 6;
-        public float timeToExplosion = 1;
+        public float timeToExplosion = 1f;
         private float _timeToExplosionCounter;
         
         private ObjectPool _objectPool;
@@ -55,7 +54,7 @@ namespace Scripts.Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Wall"))
+            if (other.CompareTag("Wall") || other.CompareTag("Enemy"))
             {
                 _timeToExplosionCounter = 0;
             }

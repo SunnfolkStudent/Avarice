@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,6 +31,7 @@ namespace Scripts.Player
         private void Update()
         {
             _animation.UpdateAnimation(_input.MoveDirection, _movement.IsDashing, _movement.IsStunned);
+            _collision.UpdateCollision(_input.MoveDirection);
             
             if (_movement.IsStunned) return;
             if (_movement.IsDashing) return;

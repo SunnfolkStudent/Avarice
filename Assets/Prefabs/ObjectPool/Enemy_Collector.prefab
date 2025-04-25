@@ -120,8 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee91597d19b1467a976be42aa5d75229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 0
-  stealAmount: 10
   stolenTreasure: 0
   _hoardPilfered: {fileID: 0}
 --- !u!114 &4686654135305180926

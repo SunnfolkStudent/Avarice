@@ -1,8 +1,8 @@
 using New_Systems;
-using Scripts.New_Systems;
+using Scripts.Player;
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     public class Attacks : MonoBehaviour
     {
@@ -59,7 +59,9 @@ namespace Scripts.Player
                         _audioSource.PlayOneShot(shootClip);
                         
                         var clone = _objectPool.SpawnFromPools("Fireball", _fireballSpawnPoint, Quaternion.identity );
-                        clone.GetComponent<Fireball>().SetMovement(_storedDirection);
+                        clone.TryGetComponent(out Fireball fireball);
+                        fireball.SetMovement(_storedDirection);
+                        //clone.GetComponent<Fireball>().SetMovement(_storedDirection);
                         _fireballTimeCounter = Time.time + fireballInterval;
                     }
                 }

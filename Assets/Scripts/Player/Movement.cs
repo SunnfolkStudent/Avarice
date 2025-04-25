@@ -19,6 +19,7 @@ namespace Scripts.Player
         [SerializeField] private float stunDuration = 1.5f;
         private bool _canDash = true;
         private Vector2 _moveDirection;
+        private Vector2 _storedDirection;
         
         public bool IsDashing {get; private set;}
         public bool IsStunned { get; private set; }
@@ -30,6 +31,7 @@ namespace Scripts.Player
         private void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
+            _storedDirection = Vector2.up;
         }
 
         private void Start() => _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,19 +40,25 @@ namespace Scripts.Player
         public void UpdateMovement(bool dash, Vector2 moveDirection)
         {
             _moveDirection = moveDirection;
-            _rigidbody2D.linearVelocity = _moveDirection * moveSpeed;
-            if (dash && _canDash)
+            
+            if (_moveDirection != Vector2.zero)
             {
-                _audioSource.PlayOneShot(dashClip);
-                StartCoroutine(Dash());
+                _storedDirection = _moveDirection;
             }
+            
+            _rigidbody2D.linearVelocity = _moveDirection * moveSpeed;
+
+            if (!dash || !_canDash) return;
+            
+            _audioSource.PlayOneShot(dashClip);
+            StartCoroutine(Dash());
         }
 
         private IEnumerator Dash()
         {
             _canDash = false;
             IsDashing = true;
-            _rigidbody2D.linearVelocity = _moveDirection * dashSpeed;
+            _rigidbody2D.linearVelocity = _storedDirection * dashSpeed;
             yield return new WaitForSeconds(dashDuration);
             IsDashing = false;
             yield return new WaitForSeconds(dashCooldown);
@@ -72,7 +80,7 @@ namespace Scripts.Player
         {
             if (!other.gameObject.CompareTag("Wall")) return;
             if (!IsDashing) return;
-            //StartCoroutine(Stun());
+            StartCoroutine(Stun());
         }
     }
 }
