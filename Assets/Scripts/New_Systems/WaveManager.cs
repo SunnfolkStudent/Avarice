@@ -68,7 +68,8 @@ namespace New_Systems
                 else
                 {
                     //currentWave = 0;
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name != "Level 6" ? "LevelClear" : "Victory");
                 }
             
                 waves[currentWave].spawnCounter = waves[currentWave].spawnCount;

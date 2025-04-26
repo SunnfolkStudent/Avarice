@@ -26,6 +26,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Level 6.unity
     guid: b23927881a759ce45960f95c3d2b4ceb
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/GoldDeath.unity
+    guid: dc40d39b5f8628241a27fc165603eb8d
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/BloodDeath.unity
+    guid: c70087db233e9ea4da842b4e7fc8e746
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Victory.unity
+    guid: 5e41d7b470fc3f348b8d7b34aecc02b9
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/LevelClear.unity
+    guid: 8c133cfb5e5a81b4289a120a1eff9197
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/Introduction.unity
+    guid: b6006e6ac83d29e4ca6eb7b05d9d8633
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

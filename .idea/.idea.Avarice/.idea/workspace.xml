@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e504e35-a712-4adb-9b02-af765b33547b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/GameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/GameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle2.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle2.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/New_ObjectPoolController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/New_ObjectPoolController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/VFX/BloodSplatter particle2_Clip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animation/VFX/BloodSplatter particle2_Clip.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Title_screen1.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Title_screen1.aseprite.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/CollectorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/CollectorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/BloodParticleReset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/BloodParticleReset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/Hoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/Hoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/SceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/WaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/UISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/UISystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +140,7 @@
       <workItem from="1745494230124" duration="4995000" />
       <workItem from="1745570656693" duration="702000" />
       <workItem from="1745580605408" duration="4663000" />
-      <workItem from="1745654518913" duration="5667000" />
+      <workItem from="1745654518913" duration="9270000" />
     </task>
     <servers />
   </component>

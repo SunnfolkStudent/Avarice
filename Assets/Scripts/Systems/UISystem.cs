@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -40,6 +41,16 @@ namespace Systems
            // healthText.text = "Health: " + _health;
             // treasureText.text = "Treasure: " + _treasure +"%";
             UpdateSliderValue();
+
+            if (_treasure <= 50)
+            {
+                SceneManager.LoadScene("GoldDeath");
+            }
+
+            if (_health <= 0)
+            {
+                SceneManager.LoadScene("BloodDeath");
+            }
         }
 
         public void ReturnHealthValue(float value)

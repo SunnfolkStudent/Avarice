@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Arrow
   - Fireball
+  - LevelClear
   layers:
   - Default
   - TransparentFX

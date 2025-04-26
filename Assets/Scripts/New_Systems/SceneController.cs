@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Scripts.New_Systems
+namespace New_Systems
 {
     public class SceneController : MonoBehaviour
     {
