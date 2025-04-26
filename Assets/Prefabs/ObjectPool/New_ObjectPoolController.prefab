@@ -65,9 +65,12 @@ Transform:
   - {fileID: 2370600853893868106}
   - {fileID: 690510050575008505}
   - {fileID: 3977050718851265560}
+  - {fileID: 344352738607428825}
   - {fileID: 3985021625437746592}
   - {fileID: 7590957865737641227}
   - {fileID: 5800229257947043232}
+  - {fileID: 3389013534237528340}
+  - {fileID: 8488337601017392399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1837996918474046102
@@ -107,7 +110,7 @@ MonoBehaviour:
     objectPool: []
     objectToSpawn: {fileID: 7932493592663577528, guid: f7986c359da6c43b0b6ab4b5a89dbf56, type: 3}
     objectParent: {fileID: 3985021625437746592}
-    spawnCount: 30
+    spawnCount: 50
   - key: Fireball
     objectPool: []
     objectToSpawn: {fileID: 8627254113787973304, guid: 0a6431b3b7a844d6aad96c41cd25efda, type: 3}
@@ -118,6 +121,21 @@ MonoBehaviour:
     objectToSpawn: {fileID: 457327172016397228, guid: f2836d09a0b404453a01a5ad212844c6, type: 3}
     objectParent: {fileID: 5800229257947043232}
     spawnCount: 3
+  - key: BloodParticles2
+    objectPool: []
+    objectToSpawn: {fileID: 2008504836474353095, guid: fd50fcc18400e1d4487af3a1ff518c11, type: 3}
+    objectParent: {fileID: 344352738607428825}
+    spawnCount: 60
+  - key: Skeletons1
+    objectPool: []
+    objectToSpawn: {fileID: 7664400339925671740, guid: f014d4356d1c5ec4ebb8054df5058c09, type: 3}
+    objectParent: {fileID: 3389013534237528340}
+    spawnCount: 30
+  - key: Skeletons2
+    objectPool: []
+    objectToSpawn: {fileID: 6187481559332675152, guid: 9a07adff9410a174a9c1262a136865e4, type: 3}
+    objectParent: {fileID: 8488337601017392399}
+    spawnCount: 30
 --- !u!1 &2273016204387377599
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +260,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 228742848130405576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6152156388660648337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344352738607428825}
+  m_Layer: 0
+  m_Name: BloodParent_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344352738607428825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152156388660648337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 228742848130405576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7593610941526960667
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +322,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 228742848130405576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7627086448921200204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8488337601017392399}
+  m_Layer: 0
+  m_Name: SkeletonParent2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8488337601017392399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627086448921200204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 228742848130405576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8027733280854436169
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +376,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8027733280854436169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 228742848130405576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8998857886309574495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3389013534237528340}
+  m_Layer: 0
+  m_Name: SkeletonParent1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3389013534237528340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998857886309574495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}

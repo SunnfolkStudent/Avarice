@@ -4,6 +4,7 @@ using New_Systems;
 using Scripts.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Enemies
 {
@@ -177,20 +178,24 @@ namespace Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if ((other.CompareTag("Player") || other.CompareTag("Fireball")) && !_isDead)
+            if ((other.CompareTag("Player")/* || other.CompareTag("Fireball")*/) && !_isDead)
             {
-                _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
+                var rand = Random.Range(0, 1);
+                
+                _objectPool.SpawnFromPools(rand == 0 ? "BloodParticles" : "BloodParticles2", transform, Quaternion.identity);
+
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
                 _isDead = true;
             }
-            /*else if (other.CompareTag("Fireball") && !_isDead)
+            else if (other.CompareTag("Fireball") && !_isDead)
             {
-                _objectPool.SpawnFromPools("Skeletons", transform, Quaternion.identity);
+                var rand = Random.Range(0, 1);
+                
+                _objectPool.SpawnFromPools(rand == 0 ? "Skeletons1" : "Skeletons2", transform, Quaternion.identity);
                 ResetAgent(false);
-                _objectPool.ReturnPooledObject(gameObject);
                 _isDead = true;
-            }*/
+            }
         }
 
         private void ResetAgent(bool setValue)
