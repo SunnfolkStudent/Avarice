@@ -83,26 +83,46 @@ namespace Enemies
 
         private void OnTriggerEnter2D(Collider2D other)
         { 
-            if ((other.CompareTag("Player") || other.CompareTag("Fireball")) && !_isDead)
+            if ((other.CompareTag("Player")/* || other.CompareTag("Fireball")*/) && !_isDead)
             {
-                if (carryingTreasure)
-                {
-                    var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
-                    var script = clone.GetComponent<TreasureDrop>();
-                    script.treasureValue = _collectTreasure.stolenTreasure;
-                    script.originHoard = _collectTreasure._hoardPilfered;
-                    _agent.speed = 3;
-                }
+                IfCarryingTreasure();
                 
-                _objectPool.SpawnFromPools("BloodParticles", transform, Quaternion.identity);
+                var rand = Random.Range(0, 2);
+                print(rand +"blood");
+                _objectPool.SpawnFromPools(rand == 0 ? "BloodParticles" : "BloodParticles2", transform, Quaternion.identity);
+
                 _isDead = true;
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
             }
+            else if (other.CompareTag("Fireball") && !_isDead)
+            {
+                IfCarryingTreasure();
+                
+                var rand = Random.Range(0, 2);
+                print(rand +"bone");
+                _objectPool.SpawnFromPools(rand == 0 ? "Skeletons1" : "Skeletons2", transform, Quaternion.identity);
+                ResetAgent(false);
+                _isDead = true;
+                
+            }
+            
             if ((other.CompareTag($"Stairs") && carryingTreasure))
             {
                 ResetAgent(false);
                 _objectPool.ReturnPooledObject(gameObject);
+                _agent.speed = 3;
+            }
+        }
+
+        private void IfCarryingTreasure()
+        {
+            if (carryingTreasure)
+            {
+                var clone = _objectPool.SpawnFromPools("Treasure", transform, Quaternion.identity);
+                var script = clone.GetComponent<TreasureDrop>();
+                script.treasureValue = _collectTreasure.stolenTreasure;
+                script.originHoard = _collectTreasure._hoardPilfered;
                 _agent.speed = 3;
             }
         }

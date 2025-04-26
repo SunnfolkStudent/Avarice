@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     [RequireComponent(typeof(Animator))]
     public class Animation : MonoBehaviour

@@ -1,8 +1,7 @@
 using New_Systems;
-using Scripts.New_Systems;
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     public class Explosion : MonoBehaviour
     {

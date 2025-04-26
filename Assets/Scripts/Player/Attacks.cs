@@ -1,5 +1,6 @@
+using System.Collections;
 using New_Systems;
-using Scripts.Player;
+using Systems;
 using UnityEngine;
 
 namespace Player
@@ -7,7 +8,7 @@ namespace Player
     public class Attacks : MonoBehaviour
     {
         public float fireballInterval;
-        private float _fireballTimeCounter;
+        [SerializeField] private float _fireballTimeCounter;
         
         [SerializeField] private Transform[] fireballSpawnPoints;
         public Transform _fireballSpawnPoint;
@@ -17,6 +18,7 @@ namespace Player
         private AudioSource _audioSource;
         public AudioClip shootClip;
         
+        private UISystem uiSystem;
         private readonly Vector2[] _directions = new []
         {
             Vector2.up, Vector2.right, Vector2.down, Vector2.left, 
@@ -29,6 +31,8 @@ namespace Player
             _objectPool = ObjectPool.Instance;
             _audioSource = GetComponent<AudioSource>();
             _fireballSpawnPoint = fireballSpawnPoints[0];
+            uiSystem = FindFirstObjectByType<UISystem>();
+            _storedDirection = Vector2.up;
         }
         
         
@@ -49,8 +53,10 @@ namespace Player
                 }
             }
             
+            
             if (shoot && _fireballTimeCounter < Time.time)
             {
+                uiSystem.FireFireball();
                 for (int i = 0; i < _directions.Length; i++)
                 {
                     if (_storedDirection == _directions[i])
@@ -63,11 +69,16 @@ namespace Player
                         fireball.SetMovement(_storedDirection);
                         //clone.GetComponent<Fireball>().SetMovement(_storedDirection);
                         _fireballTimeCounter = Time.time + fireballInterval;
+                        StartCoroutine(nameof(ChargeFireball));
                     }
                 }
                 
             }
         }
-        
+        private IEnumerator ChargeFireball()
+        {
+            yield return new WaitForSeconds(fireballInterval-0.2f);
+            uiSystem.ChargeFireball();
+        }
     }
 }

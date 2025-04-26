@@ -1,9 +1,7 @@
-
-using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Movement : MonoBehaviour

@@ -36,6 +36,10 @@ namespace Player
 
         public void SetMovement(Vector2 direction)
         {
+            if (direction.magnitude > 1)
+            {
+                direction.Normalize();
+            }
             _rigidbody2D.linearVelocity = direction * speed;
         }
 

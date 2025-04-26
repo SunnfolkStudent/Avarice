@@ -1,8 +1,7 @@
-using Scripts.Systems;
 using Systems;
 using UnityEngine;
 
-namespace Scripts.Player
+namespace Player
 {
     public class PlayerHealth : MonoBehaviour
     {
@@ -11,6 +10,11 @@ namespace Scripts.Player
         private float _invincibilityTimer;
         [SerializeField] private float damage = 1f;
         public UISystem ui;
+
+        private void Awake()
+        {
+            ui = GameObject.FindFirstObjectByType<UISystem>();
+        }
 
         private void Update()
         {
