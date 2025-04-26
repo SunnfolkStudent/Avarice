@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +6,10 @@ namespace New_Systems
 {
     public class GameManager : MonoBehaviour
     {
+        private static readonly int Level = Animator.StringToHash("Level");
         private Animator _animator;
         public int previousLevel;
-        private bool hasLoaded;
+        private bool _hasLoaded;
         
         private void Awake()
         {
@@ -19,22 +19,43 @@ namespace New_Systems
         private void Update()
         {
             print(SceneManager.GetActiveScene().name);
-            
-            if (SceneManager.GetActiveScene().name == "Level 6")
+
+            if (SceneManager.GetActiveScene().name == "Level 1")
             {
-                Destroy(gameObject);
+                previousLevel = 1;
+                _hasLoaded = true;
             }
-            else if (SceneManager.GetActiveScene().name == "LevelClear" && hasLoaded)
+            else if (SceneManager.GetActiveScene().name == "Level 2")
+            {
+                previousLevel = 2;
+                _hasLoaded = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "Level 3")
+            {
+                previousLevel = 3;
+                _hasLoaded = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "Level 4")
+            {
+                previousLevel = 4;
+                _hasLoaded = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "Level 5")
+            {
+                previousLevel = 5;
+                _hasLoaded = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "Level 6")
+            {
+                previousLevel = 6;
+                _hasLoaded = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "LevelClear" && _hasLoaded)
             {
                 _animator = FindFirstObjectByType<Animator>();
-                _animator.SetFloat("Level", previousLevel);
+                _animator.SetFloat(Level, previousLevel);
                 StartCoroutine(nameof(WaitForLevelChange));
-                hasLoaded = false;
-            }
-            else
-            {
-               previousLevel = SceneManager.GetActiveScene().buildIndex; 
-               hasLoaded = true;
+                _hasLoaded = false;
             }
         }
 
