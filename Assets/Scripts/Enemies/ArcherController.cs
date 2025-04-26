@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
 using New_Systems;
-using Scripts.New_Systems;
+using Scripts.Enemies;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-namespace Scripts.Enemies
+namespace Enemies
 {
     public class ArcherController: MonoBehaviour
     {
@@ -100,9 +99,12 @@ namespace Scripts.Enemies
             {
                 var targetPos = _target.position;
                 var clone = _objectPool.SpawnFromPools("Arrows", transform, Quaternion.identity);
-                clone.GetComponent<ArrowProjectile>().SetDirection(targetPos - transform.position);
+                //clone.GetComponent<ArrowProjectile>().SetDirection(targetPos - transform.position);
+                clone.TryGetComponent(out ArrowProjectile arrowProjectile);
+                arrowProjectile.SetDirection(targetPos-transform.position);
+                
                 clone.transform.rotation = Quaternion.FromToRotation(transform.position, targetPos);
-                StartCoroutine(_objectPool.ReturnPooledObject(clone, 5f));
+                StartCoroutine(_objectPool.ReturnPooledObject(clone, 6f));
                 _attackIntervalCounter = Time.time + attackInterval;
                 _audioSource.PlayOneShot(shoot);
             }

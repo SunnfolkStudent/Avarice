@@ -6,11 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8e504e35-a712-4adb-9b02-af765b33547b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay Ui.aseprite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay Ui.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/fireball charge ui.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/fireball charge ui.aseprite.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArrowProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArrowProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/HoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/HoardManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/WaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Animation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Attacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Explosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/UISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/UISystem.cs" afterDir="false" />
     </list>
@@ -135,6 +143,7 @@
       <workItem from="1745494230124" duration="4995000" />
       <workItem from="1745570656693" duration="702000" />
       <workItem from="1745580605408" duration="4663000" />
+      <workItem from="1745654518913" duration="3945000" />
     </task>
     <servers />
   </component>

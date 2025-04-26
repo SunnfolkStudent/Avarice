@@ -49,7 +49,7 @@ namespace New_Systems
             {
                 print("Archer");
                 //clone.GetComponent<Scripts.Enemies.ArcherController>().SetTarget(target);
-                clone.TryGetComponent( out Scripts.Enemies.ArcherController controller);
+                clone.TryGetComponent( out ArcherController controller);
                 controller.SetTarget(target);
             }
         

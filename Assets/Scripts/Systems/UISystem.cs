@@ -1,24 +1,44 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Systems
 {
     public class UISystem : MonoBehaviour
     {
-        public TMP_Text healthText;
-        public TMP_Text treasureText;
+       // public TMP_Text healthText;
+        //public TMP_Text treasureText;
 
         private float _health;
         private int _treasure;
-        public float paddingValue;
+        
+        public float goldPaddingValue;
+        [FormerlySerializedAs("GoldSlider")] public RectMask2D goldSlider;
+        public float healthPaddingValue;
+        [FormerlySerializedAs("HealthSlider")] public RectMask2D healthSlider;
+        
+        private Animator _animator;
 
-        public RectMask2D paddingObject;
+        private void Start()
+        {
+            _animator = GetComponentInChildren<Animator>();
+        }
+
+        public void FireFireball()
+        {
+            _animator.Play("igniting Charge");
+        }
+
+        public void ChargeFireball()
+        {
+            _animator.Play("building charge");
+        }
+        
 
         private void Update()
         {
-            healthText.text = "Health: " + _health;
-            treasureText.text = "Treasure: " + _treasure +"%";
+           // healthText.text = "Health: " + _health;
+            // treasureText.text = "Treasure: " + _treasure +"%";
             UpdateSliderValue();
         }
 
@@ -31,12 +51,15 @@ namespace Systems
         {
             _treasure = value;
         }
-        
-        public void UpdateSliderValue()
+
+        private void UpdateSliderValue()
         {
-            paddingValue = (100 - _treasure) * 4.5f;
-            paddingObject.padding = new Vector4(0,0, paddingValue,0);
+            goldPaddingValue = (100 - _treasure) * 9f;
+            goldSlider.padding = new Vector4(0,0, goldPaddingValue,0);
             // 4.5 per value of 
+            healthPaddingValue = (100 - _health) * 4.5f;
+            healthSlider.padding = new Vector4(0,0, healthPaddingValue,0);
+            
         }
     }
 }

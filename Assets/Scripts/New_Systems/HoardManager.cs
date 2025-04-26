@@ -1,10 +1,8 @@
 using System.Linq;
-using New_Systems;
-using Scripts.Systems;
 using Systems;
 using UnityEngine;
 
-namespace Scripts.New_Systems
+namespace New_Systems
 {
     public class HoardManager : MonoBehaviour
     {
@@ -20,6 +18,7 @@ namespace Scripts.New_Systems
         private void Start()
         {
             hoards = FindObjectsByType<Hoard>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            ui = GameObject.FindFirstObjectByType<UISystem>();
             _currentHoardValues = new int[hoards.Length];
             
             for (int i = 0; i < hoards.Length; i++)

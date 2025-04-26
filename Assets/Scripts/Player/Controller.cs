@@ -1,9 +1,7 @@
-using Player;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-namespace Scripts.Player
+namespace Player
 {
     [RequireComponent(typeof(Movement), typeof(GetInput), typeof(Attacks))]
     [RequireComponent(typeof(Animation), typeof(PlayerCollision))]
