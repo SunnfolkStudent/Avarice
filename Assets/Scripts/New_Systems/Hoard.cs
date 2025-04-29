@@ -17,7 +17,7 @@ namespace New_Systems
         private static readonly int GoldpileEmpty = Animator.StringToHash("GoldPileEmpty");
         
         
-        private int[] sizes =   { 1000, 750, 550, 300, 200, 100, 50, 0, -10};
+        private int[] sizes =   { 1000, 500, 425, 325, 225, 175, 125, 0, -10};
         private static readonly int[] animations =  {GoldpileXXL, GoldpileXL, GoldpileL, GoldpileM, GoldpileS, GoldpileXS, GoldpileXXS, GoldpileEmpty};
 
         private void Awake()

@@ -20,10 +20,10 @@ namespace Enemies
                 case < 50:
                     _currentStealAmount = _minStealAmount;
                     break;
-                case < 300:
+                case < 125:
                     _currentStealAmount = _midStealAmount;
                     break;
-                case > 450:
+                case > 250:
                     _currentStealAmount = _maxStealAmount;
                     break;
             }
