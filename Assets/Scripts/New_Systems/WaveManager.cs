@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Enemies;
+using Systems;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,11 +24,13 @@ namespace New_Systems
     
         public List<Wave> waves;
         private ObjectPool _objectPool;
+        private UISystem _uiSystem;
 
         private void Start()
         {
             _objectPool = ObjectPool.Instance;
             waves[currentWave].spawnCounter = waves[currentWave].spawnCount;
+            _uiSystem = FindAnyObjectByType<UISystem>();
         }
 
         private void FixedUpdate()
@@ -69,6 +72,8 @@ namespace New_Systems
                 {
                     //currentWave = 0;
                     //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                    var scoreManager = FindFirstObjectByType<GameManager>();
+                    scoreManager.SetScore(_uiSystem.TreasureScore);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name != "Level 6" ? "LevelClear" : "Victory");
                 }
             

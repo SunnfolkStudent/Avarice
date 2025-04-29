@@ -12,6 +12,7 @@ namespace Systems
 
         private float _health = 100f;
         private int _treasure = 100;
+        public int TreasureScore { get; private set; }
         
         public float goldPaddingValue;
         [FormerlySerializedAs("GoldSlider")] public RectMask2D goldSlider;
@@ -40,6 +41,7 @@ namespace Systems
 
         private void Update()
         {
+            TreasureScore = _treasure;
            // healthText.text = "Health: " + _health;
             // treasureText.text = "Treasure: " + _treasure +"%";
             UpdateSliderValue();

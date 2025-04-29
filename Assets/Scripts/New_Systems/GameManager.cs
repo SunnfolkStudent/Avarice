@@ -10,6 +10,8 @@ namespace New_Systems
         private Animator _animator;
         public int previousLevel;
         private bool _hasLoaded;
+
+        public int Score { get; private set; }
         
         private void Awake()
         {
@@ -19,9 +21,10 @@ namespace New_Systems
         private void Update()
         {
             print(SceneManager.GetActiveScene().name);
-
+            
             if (SceneManager.GetActiveScene().name == "Level 1")
             {
+                
                 previousLevel = 1;
                 _hasLoaded = true;
             }
@@ -54,8 +57,17 @@ namespace New_Systems
             {
                 _animator = FindFirstObjectByType<Animator>();
                 _animator.SetFloat(Level, previousLevel);
+                
+                var scoreCanvas = FindFirstObjectByType<ScoreCanvas>();
+                scoreCanvas.SetScoreText(Score);
+                
                 StartCoroutine(nameof(WaitForLevelChange));
                 _hasLoaded = false;
+            }
+            else if (SceneManager.GetActiveScene().name == "Victory")
+            {
+                var scoreCanvas = FindFirstObjectByType<ScoreCanvas>();
+                scoreCanvas.SetScoreText(Score);
             }
         }
 
@@ -63,6 +75,11 @@ namespace New_Systems
         {
             yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(previousLevel+1);
+        }
+
+        public void SetScore(int score)
+        {
+            Score += score;
         }
     }
 }
