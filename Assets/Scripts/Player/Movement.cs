@@ -78,7 +78,7 @@ namespace Player
         {
             if (!other.gameObject.CompareTag("Wall")) return;
             if (!IsDashing) return;
-            StartCoroutine(Stun());
+            //StartCoroutine(Stun());
         }
     }
 }
