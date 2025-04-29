@@ -5839,6 +5839,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48077f747c6de45ac88b6ef21070f31b, type: 3}
+--- !u!20 &397284493 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 152139516844322262, guid: 48077f747c6de45ac88b6ef21070f31b, type: 3}
+  m_PrefabInstance: {fileID: 397284492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424130645
 GameObject:
   m_ObjectHideFlags: 0
@@ -11629,6 +11634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6887872965259315459, guid: 4d63ca47ccbae4292b19ca272a8321ec, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 397284493}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

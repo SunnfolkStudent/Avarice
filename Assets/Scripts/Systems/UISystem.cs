@@ -67,10 +67,10 @@ namespace Systems
 
         private void UpdateSliderValue()
         {
-            goldPaddingValue = (100 - _treasure) * 9f;
+            goldPaddingValue = (100 - _treasure) * 4.5f;
             goldSlider.padding = new Vector4(0,0, goldPaddingValue,0);
             // 4.5 per value of 
-            healthPaddingValue = (100 - _health) * 4.5f;
+            healthPaddingValue = (100 - _health) * 2.25f;
             healthSlider.padding = new Vector4(0,0, healthPaddingValue,0);
             
         }

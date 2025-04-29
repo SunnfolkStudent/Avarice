@@ -12033,14 +12033,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5197350763920740002, guid: 4d63ca47ccbae4292b19ca272a8321ec, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -623.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 5197350763920740002, guid: 4d63ca47ccbae4292b19ca272a8321ec, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 472.54
-      objectReference: {fileID: 0}
     - target: {fileID: 6495670347512798346, guid: 4d63ca47ccbae4292b19ca272a8321ec, type: 3}
       propertyPath: m_Name
       value: PlayerUI
