@@ -10,8 +10,8 @@ namespace Systems
        // public TMP_Text healthText;
         //public TMP_Text treasureText;
 
-        private float _health;
-        private int _treasure;
+        private float _health = 100f;
+        private int _treasure = 100;
         
         public float goldPaddingValue;
         [FormerlySerializedAs("GoldSlider")] public RectMask2D goldSlider;
@@ -23,6 +23,8 @@ namespace Systems
         private void Start()
         {
             _animator = GetComponentInChildren<Animator>();
+            _health = 100f;
+            _treasure = 100;
         }
 
         public void FireFireball()
