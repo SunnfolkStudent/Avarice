@@ -8,7 +8,7 @@ namespace Player
         [SerializeField] private float health = 100f;
         [SerializeField] private float invincibilityDuration = .1f;
         private float _invincibilityTimer;
-        [SerializeField] private float damage = 1f;
+        [SerializeField] private float damage = 2f;
         public UISystem ui;
 
         private void Awake()
