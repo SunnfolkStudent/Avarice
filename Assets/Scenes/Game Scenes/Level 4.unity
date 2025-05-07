@@ -17516,49 +17516,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2879834959553143133, guid: 26d5221f2d8eef7439c6b51f6ea7f357, type: 3}
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951800274190414284, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3291761731524965625, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Radius
-      value: 0.67727876
-      objectReference: {fileID: 0}
-    - target: {fileID: 3291761731524965625, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.051467896
-      objectReference: {fileID: 0}
-    - target: {fileID: 3291761731524965625, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.12581086
-      objectReference: {fileID: 0}
     - target: {fileID: 5781467900313291149, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7726823197950192746, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7726823197950192746, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7726823197950192746, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17604,10 +17564,6 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 485032479}
-    - target: {fileID: 7822459727867226216, guid: ddbdfc5cbe56c47539c7a68f2714fd43, type: 3}
-      propertyPath: damage
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

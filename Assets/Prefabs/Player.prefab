@@ -286,7 +286,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.5, y: 1}
+  m_Size: {x: 2.5000005, y: 1.3603144}
   m_Direction: 1
 --- !u!1 &4717478650086759444
 GameObject:
@@ -556,7 +556,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 4854478233228083313, guid: 860e016d3598c4523b169fe052029771, type: 3}
+  m_Sprite: {fileID: 2879834959553143133, guid: 26d5221f2d8eef7439c6b51f6ea7f357, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -564,7 +564,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &2195949311089506577
@@ -649,6 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballInterval: 1
+  _fireballTimeCounter: 0
   fireballSpawnPoints:
   - {fileID: 5578502973769259963}
   - {fileID: 5478601497638183693}
@@ -695,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   invincibilityDuration: 0.1
-  damage: 1
+  damage: 5
   ui: {fileID: 0}
 --- !u!114 &3924633644161360315
 MonoBehaviour:
@@ -974,5 +975,5 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 1, y: 1.7430539}
   m_Direction: 0

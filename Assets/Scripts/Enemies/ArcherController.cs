@@ -195,6 +195,7 @@ namespace Enemies
                 _objectPool.SpawnFromPools(rand == 0 ? "Skeletons1" : "Skeletons2", transform, Quaternion.identity);
                 ResetAgent(false);
                 _isDead = true;
+                _objectPool.ReturnPooledObject(gameObject);
             }
         }
 
