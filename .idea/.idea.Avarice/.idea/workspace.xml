@@ -6,17 +6,36 @@
   <component name="ChangeListManager">
     <list default="true" id="8e504e35-a712-4adb-9b02-af765b33547b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Avarice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BloodSplat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BloodSplat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BloodSplat2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BloodSplat2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/Enemy_Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/Enemy_Archer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/Enemy_Collector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ObjectPool/Enemy_Collector.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Dragon/Dragon.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Dragon/Dragon.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Enemies/Enemy_Archer01.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Enemies/Enemy_Archer01.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Enemies/Enemy_Looter01.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Enemies/Enemy_Looter01.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Font.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Font.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Game over 2.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Game over 2.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Game over Death.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Game over Death.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Introductions unity.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Introductions unity.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Level clear screens for unity.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Level clear screens for unity.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Title_screen1.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Title_screen1.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Screens/Win screen 02.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Screens/Win screen 02.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/fireball charge ui.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/fireball charge ui.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle2.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/BloodSplatter particle2.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/Fireball explosion.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/Fireball explosion.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/fireball charge ui.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/fireball charge ui.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/fireball.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/fireball.aseprite.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scenes/Level 6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CutScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ArcherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputSystem_Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New_Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New_Systems/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +66,12 @@
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -58,6 +81,9 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -66,27 +92,34 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\eriar\Documents\Unity Projects\Builds" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.6.9f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
+      <option name="coreClr" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
@@ -95,14 +128,18 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
+      <option name="coreClr" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
       <method v="2" />
     </configuration>
   </component>
@@ -136,6 +173,14 @@
       <workItem from="1745654518913" duration="9270000" />
       <workItem from="1745667262245" duration="916000" />
       <workItem from="1745913067236" duration="1390000" />
+      <workItem from="1781162244663" duration="10000" />
+      <workItem from="1781162523874" duration="160000" />
+      <workItem from="1791306710611" duration="377000" />
+      <workItem from="1791307543241" duration="93000" />
+      <workItem from="1794485638239" duration="5000" />
+      <workItem from="1794485665304" duration="1090000" />
+      <workItem from="1794566675257" duration="1000" />
+      <workItem from="1794566974883" duration="125000" />
     </task>
     <servers />
   </component>

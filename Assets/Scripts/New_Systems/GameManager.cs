@@ -24,7 +24,6 @@ namespace New_Systems
             
             if (SceneManager.GetActiveScene().name == "Level 1")
             {
-                
                 previousLevel = 1;
                 _hasLoaded = true;
             }

@@ -13,7 +13,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
-  importerVersion: 1
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -48,7 +48,9 @@ ScriptedImporter:
     cubemapConvolution: 0
     seamlessCubemap: 0
     alphaIsTransparency: 1
+    spriteTessellationMethod: 0
     spriteTessellationDetail: -1
+    spriteGeometrySubdivision: 0
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
@@ -89,6 +91,8 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
     importHiddenLayers: 0
@@ -102,9 +106,9 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
-  importFileNodeState: 1
+    generateIndividualEvents: 1
+    generateSpriteAtlas: 1
   platformSettingsDirtyTick: 638812632271327119
-  textureAssetName: 
   singleSpriteImportData:
   - name: 
     originalName: 
@@ -276,8 +280,14 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 19, y: 16}
   spriteSheetImportData: []
+  tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
+    uuid:
+      value0: 368851733
+      value1: 0
+      value2: 0
+      value3: 0
     guid: 368851733
     name: BloodSplatter particle2
     layerFlags: 0
@@ -348,7 +358,10 @@ ScriptedImporter:
         height: 4
       spriteId: 8ecd1eaccf5d06d4bb579770769de947
     linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
     parentIndex: -1
+  tileSets: []
   platformSettings:
   - name: Default
     overridden: 0
@@ -400,6 +413,5 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
-  spritePackingTag: 
-  canvasSize: {x: 8, y: 8}
   previousTextureSize: {x: 32, y: 64}
+  canvasSize: {x: 8, y: 8}

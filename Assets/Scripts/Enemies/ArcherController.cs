@@ -102,7 +102,7 @@ namespace Enemies
                 var clone = _objectPool.SpawnFromPools("Arrows", transform, Quaternion.identity);
                 //clone.GetComponent<ArrowProjectile>().SetDirection(targetPos - transform.position);
                 clone.TryGetComponent(out ArrowProjectile arrowProjectile);
-                arrowProjectile.SetDirection(targetPos-transform.position);
+                arrowProjectile.SetDirection(targetPos - transform.position);
                 
                 clone.transform.rotation = Quaternion.FromToRotation(transform.position, targetPos);
                 StartCoroutine(_objectPool.ReturnPooledObject(clone, 6f));
